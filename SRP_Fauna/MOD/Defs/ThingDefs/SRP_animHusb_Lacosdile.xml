@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ThingDefs>
+
+   <ThingDef Name="BasePawn" Abstract="True">
+      <eType>Pawn</eType>
+      <thingClass>Pawn</thingClass>
+      <category>Pawn</category>
+      <selectable>true</selectable>
+      <tickerType>Normal</tickerType>
+      <altitudeLayer>Pawn</altitudeLayer>
+      <useStandardHealth>false</useStandardHealth>
+      <hasTooltip>true</hasTooltip>
+      <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+      <inspectorTabs>
+         <li>ITab_Pawn_Thoughts</li>
+         <li>ITab_Pawn_Prisoner</li>
+         <li>ITab_Pawn_Gear</li>
+         <li>ITab_Pawn_Character</li>
+         <li>ITab_Pawn_Health</li>
+      </inspectorTabs>
+      <drawGUIOverlay>true</drawGUIOverlay>
+   </ThingDef>
+
+   <ThingDef ParentName="BasePawn" Name="BaseAnimal" Abstract="True">
+      <race>
+         <hasStory>false</hasStory>
+         <needsRest>false</needsRest>
+         <minFoodTaste>Plant</minFoodTaste>
+         <isFlesh>true</isFlesh>
+         <hasLeather>true</hasLeather>
+         <hasGenders>true</hasGenders>
+      </race>
+   </ThingDef>
+
+   <!-- ============================ Wild Animals ========================== -->
+
+  <ThingDef ParentName="BaseAnimal">
+    <defName>Lacosdile</defName>
+    <thingClass>SRP_Fauna.Pawn_WildAnimal</thingClass>
+    <label>Wild Lacosdile</label>
+    <description>Crossbred and genetically manipulated lizard originally created as part of clever fragrance marketing gig. Being herbivorous and barely dangerous made them very common pets. However as the trends passed Lacosdiles were soon found flooding the sewage systems and in desperation were carried off across the galaxy to the furthest reaches of space. As a result the species now flourish on the desolate rimworlds.</description>
+    <graphicOverdraw>true</graphicOverdraw>
+    <targetHitChanceFactor>0.6</targetHitChanceFactor>
+    <statBases>
+      <MoveSpeed>2.23</MoveSpeed>
+      <Flammability>1.0</Flammability>
+      <ComfyTemperatureMin>0</ComfyTemperatureMin>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <meleeDamageBaseAmount>6</meleeDamageBaseAmount>
+        <meleeDamageDef>Bite</meleeDamageDef>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+    </verbs>
+    <race>
+      <thinkTree>HerbivoreHerd</thinkTree>
+      <hungerRate>0.8</hungerRate>
+      <body>QuadrupedAnimalWithClawsTailAndJowl</body>
+      <bodySize>0.7</bodySize>
+      <healthScale>0.78</healthScale>
+      <diet>Herbivorous</diet>
+      <leatherColor>(114,152,59)</leatherColor>
+      <leatherLabel>Lacosdile skin</leatherLabel>
+      <leatherInsulation>1.2</leatherInsulation>
+      <soundWounded>Pawn_Lizard_Wounded</soundWounded>
+      <soundDeath>Pawn_Lizard_Death</soundDeath>
+      <soundCall>Pawn_Lizard_Call</soundCall>
+      <soundAngry>Pawn_Lizard_Angry</soundAngry>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+
+   <!-- ============================ Domesticated Animals Race ========================== -->
+
+   <ThingDef ParentName="BaseAnimal" Name="LacosdileDomestic">
+      <defName>LacosdileDomestic</defName>
+      <thingClass>SRP_Fauna.FarmAnimal</thingClass>
+      <label>Domesticated Lacosdile</label>
+      <description>A domesticated Lacosdile.</description>
+     <graphicOverdraw>true</graphicOverdraw>
+     <targetHitChanceFactor>0.6</targetHitChanceFactor>
+     <statBases>
+       <MoveSpeed>2.23</MoveSpeed>
+       <Flammability>1.0</Flammability>
+       <ComfyTemperatureMin>0</ComfyTemperatureMin>
+     </statBases>
+     <verbs>
+       <li>
+         <verbClass>Verb_MeleeAttack</verbClass>
+         <defaultCooldownTicks>100</defaultCooldownTicks>
+         <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+         <meleeDamageDef>Scratch</meleeDamageDef>
+         <linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+       </li>
+       <li>
+         <verbClass>Verb_MeleeAttack</verbClass>
+         <defaultCooldownTicks>100</defaultCooldownTicks>
+         <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+         <meleeDamageDef>Scratch</meleeDamageDef>
+         <linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+       </li>
+       <li>
+         <verbClass>Verb_MeleeAttack</verbClass>
+         <defaultCooldownTicks>100</defaultCooldownTicks>
+         <meleeDamageBaseAmount>6</meleeDamageBaseAmount>
+         <meleeDamageDef>Bite</meleeDamageDef>
+         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+       </li>
+     </verbs>
+     <race>
+       <thinkTree>HerbivoreHerd</thinkTree>
+       <hungerRate>0.8</hungerRate>
+       <body>QuadrupedAnimalWithClawsTailAndJowl</body>
+       <bodySize>0.7</bodySize>
+       <healthScale>0.78</healthScale>
+       <diet>Herbivorous</diet>
+       <leatherColor>(114,152,59)</leatherColor>
+       <leatherLabel>Lacosdile skin</leatherLabel>
+       <leatherInsulation>1.2</leatherInsulation>
+       <soundWounded>Pawn_Lizard_Wounded</soundWounded>
+       <soundDeath>Pawn_Lizard_Death</soundDeath>
+       <soundCall>Pawn_Lizard_Call</soundCall>
+       <soundAngry>Pawn_Lizard_Angry</soundAngry>
+       <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+       <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+       <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+     </race>
+   </ThingDef>
+
+   <ThingDef ParentName="LacosdileDomestic" Name="LacosdileBaby">
+      <defName>LacosdileKid</defName>
+      <thingClass>SRP_Fauna.KidAnimal</thingClass>
+      <label>Lacosdile Kid</label>
+      <graphicOverdraw>false</graphicOverdraw>
+      <targetHitChanceFactor>1.0</targetHitChanceFactor>
+      <statBases>
+         <MoveSpeed>1.14</MoveSpeed>
+         <Flammability>1.0</Flammability>
+      	 <ComfyTemperatureMin>0</ComfyTemperatureMin>
+      </statBases>
+     <verbs>
+       <li>
+         <verbClass>Verb_MeleeAttack</verbClass>
+         <defaultCooldownTicks>100</defaultCooldownTicks>
+         <meleeDamageBaseAmount>2</meleeDamageBaseAmount>
+         <meleeDamageDef>Bite</meleeDamageDef>
+         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+       </li>
+     </verbs>
+     <race>
+       <hasLeather>false</hasLeather>
+       <healthScale>0.3</healthScale>
+       <hungerRate>0.5</hungerRate>
+       <bodySize>0.2</bodySize>
+     </race>
+   </ThingDef>
+
+</ThingDefs>
