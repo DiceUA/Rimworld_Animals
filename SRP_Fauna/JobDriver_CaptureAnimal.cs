@@ -51,87 +51,45 @@ namespace SRP_Fauna
 
         private void TryCapture()
         {
+
+            foreach(AnimalsWild animalWild in Enum.GetValues(typeof(AnimalsWild)))
+            {
+                if (this.animal.def.defName == animalWild.ToString())
+                    this.animalKind = this.animal.def.defName + "Domestic";
+            }
+            // Now we can capture all animals from AnimalsWild list
+             
+            
+           /*// This code was refactored to 5 lines, see above. I left it so you can learn something.
+            
             if (this.animal.def.defName == "Muffalo")
-            {
-                this.animalKind = "MuffaloDomestic";
-            }
-            else
-            {
-                if (this.animal.def.defName == "Deer")
-                {
-                    this.animalKind = "DeerDomestic";
-                }
-                else
-                {
-                    if (this.animal.def.defName == "Squirrel")
-                    {
-                        this.animalKind = "SquirrelDomestic";
-                    }
-                    else
-                    {
-                        if (this.animal.def.defName == "Boomrat")
-                        {
-                            this.animalKind = "BoomratDomestic";
-                        }
-                        else
-                        {
-                            if (this.animal.def.defName == "Megascarab")
-                            {
-                                this.animalKind = "MegascarabDomestic";
-                            }
-                            else
-                            {
-                                if (this.animal.def.defName == "Iguana")
-                                {
-                                    this.animalKind = "IguanaDomestic";
-                                }
-                                else
-                                {
-                                    if (this.animal.def.defName == "Cobra")
-                                    {
-                                        this.animalKind = "CobraDomestic";
-                                    }
-                                    else
-                                    {
-                                        if (this.animal.def.defName == "Dromedary")
-                                        {
-                                            this.animalKind = "DromedaryDomestic";
-                                        }
-                                        else
-                                        {
-                                            if (this.animal.def.defName == "Monkey")
-                                            {
-                                                this.animalKind = "MonkeyDomestic";
-                                            }
-                                            else
-                                            {
-                                                if (this.animal.def.defName == "Rhinoceros")
-                                                {
-                                                    this.animalKind = "RhinocerosDomestic";
-                                                }
-                                                else
-                                                {
-                                                    if (this.animal.def.defName == "Tortoise")
-                                                    {
-                                                        this.animalKind = "TortoiseDomestic";
-                                                    }
-                                                    else
-                                                    {
-                                                        if (this.animal.def.defName == "WildBoar")
-                                                        {
-                                                            this.animalKind = "BoarDomestic";
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+                this.animalKind = DomesticAnimals.MuffaloDomestic.ToString();
+            if (this.animal.def.defName == "Deer")
+                this.animalKind = DomesticAnimals.DeerDomestic.ToString();
+            if (this.animal.def.defName == AnimalsWild.Squirrel.ToString())
+                this.animalKind = DomesticAnimals.SquirrelDomestic.ToString();
+            if (this.animal.def.defName == "Boomrat")
+                this.animalKind = DomesticAnimals.BoomratDomestic.ToString();
+            if (this.animal.def.defName == "Megascarab")
+                this.animalKind = DomesticEggLayers.MegascarabDomestic.ToString();
+            if (this.animal.def.defName == "Iguana")
+                this.animalKind = DomesticEggLayers.IguanaDomestic.ToString();
+            if (this.animal.def.defName == "Cobra")
+                this.animalKind = DomesticEggLayers.CobraDomestic.ToString();
+            if (this.animal.def.defName == "Dromedary")
+                this.animalKind = DomesticAnimals.DromedaryDomestic.ToString();
+            if (this.animal.def.defName == "Monkey")
+                this.animalKind = DomesticAnimals.MonkeyDomestic.ToString();
+            if (this.animal.def.defName == "Rhinoceros")
+                this.animalKind = DomesticAnimals.RhinocerosDomestic.ToString();
+            if (this.animal.def.defName == "Tortoise")
+                this.animalKind = DomesticEggLayers.TortoiseDomestic.ToString();
+            if (this.animal.def.defName == "WildBoar")
+                this.animalKind = DomesticAnimals.BoarDomestic.ToString();
+            //if (this.animal.def.defName == "Furx")
+            //    this.animalKind = DomesticAnimals.Furx.ToString() + "Domestic";
+            */
+
             int num = UnityEngine.Random.Range(0, 100);
             int level = this.pawn.skills.GetSkill(SkillDefOf.Social).level;
             float num2 = (float)(level * 2);
