@@ -27,35 +27,35 @@ namespace SRP_Fauna
         //
         private void Birth()
         {
-            if (this.pawn.def.defName == "D_Muffalo")
+            if (this.pawn.def.defName == "MuffaloDomestic")
             {
                 Pawn pawn = PawnGenerator.GeneratePawn(PawnKindDef.Named("MuffaloKid"), null);
                 IntVec3 intVec = GenAdj.RandomAdjacentCell8Way(this.pawn.Position);
                 GenSpawn.Spawn(pawn, intVec);
                 return;
             }
-            if (this.pawn.def.defName == "D_Deer")
+            if (this.pawn.def.defName == "DeerDomestic")
             {
                 Pawn pawn2 = PawnGenerator.GeneratePawn(PawnKindDef.Named("DeerKid"), null);
                 IntVec3 intVec2 = GenAdj.RandomAdjacentCell8Way(this.pawn.Position);
                 GenSpawn.Spawn(pawn2, intVec2);
                 return;
             }
-            if (this.pawn.def.defName == "D_Dromedary")
+            if (this.pawn.def.defName == "DromedaryDomestic")
             {
                 Pawn pawn3 = PawnGenerator.GeneratePawn(PawnKindDef.Named("DromedaryKid"), null);
                 IntVec3 intVec3 = GenAdj.RandomAdjacentCell8Way(this.pawn.Position);
                 GenSpawn.Spawn(pawn3, intVec3);
                 return;
             }
-            if (this.pawn.def.defName == "D_Rhinoceros")
+            if (this.pawn.def.defName == "RhinocerosDomestic")
             {
                 Pawn pawn4 = PawnGenerator.GeneratePawn(PawnKindDef.Named("RhinocerosKid"), null);
                 IntVec3 intVec4 = GenAdj.RandomAdjacentCell8Way(this.pawn.Position);
                 GenSpawn.Spawn(pawn4, intVec4);
                 return;
             }
-            if (this.pawn.def.defName == "D_Squirrel")
+            if (this.pawn.def.defName == "SquirrelDomestic")
             {
                 int i = UnityEngine.Random.Range(2, 4);
                 while (i > 0)
@@ -67,7 +67,7 @@ namespace SRP_Fauna
                 }
                 return;
             }
-            if (this.pawn.def.defName == "D_Boomrat")
+            if (this.pawn.def.defName == "BoomratDomestic")
             {
                 int j = UnityEngine.Random.Range(2, 4);
                 while (j > 0)
@@ -79,7 +79,7 @@ namespace SRP_Fauna
                 }
                 return;
             }
-            if (this.pawn.def.defName == "D_Monkey")
+            if (this.pawn.def.defName == "MonkeyDomestic")
             {
                 int k = UnityEngine.Random.Range(2, 3);
                 while (k > 0)
@@ -91,7 +91,7 @@ namespace SRP_Fauna
                 }
                 return;
             }
-            if (this.pawn.def.defName == "D_Boar")
+            if (this.pawn.def.defName == "BoarDomestic")
             {
                 int l = UnityEngine.Random.Range(3, 9);
                 while (l > 0)
@@ -103,39 +103,39 @@ namespace SRP_Fauna
                 }
                 return;
             }
-            if (this.pawn.def.defName == "D_Megascarab")
+            if (this.pawn.def.defName == "MegascarabDomestic")
             {
                 Thing thing = ThingMaker.MakeThing(ThingDef.Named("EggHatchery"), null);
                 IntVec3 intVec9 = GenAdj.RandomAdjacentCell8Way(this.pawn.Position);
                 this.eg = (thing as Eggs);
-                this.eg.parentIs("D_Megascarab");
+                this.eg.parentIs("MegascarabDomestic");
                 GenSpawn.Spawn(thing, intVec9);
                 return;
             }
-            if (this.pawn.def.defName == "D_Iguana")
+            if (this.pawn.def.defName == "IguanaDomestic")
             {
                 Thing thing2 = ThingMaker.MakeThing(ThingDef.Named("EggHatchery"), null);
                 IntVec3 intVec10 = GenAdj.RandomAdjacentCell8Way(this.pawn.Position);
                 this.eg = (thing2 as Eggs);
-                this.eg.parentIs("D_Iguana");
+                this.eg.parentIs("IguanaDomestic");
                 GenSpawn.Spawn(thing2, intVec10);
                 return;
             }
-            if (this.pawn.def.defName == "D_Cobra")
+            if (this.pawn.def.defName == "CobraDomestic")
             {
                 Thing thing3 = ThingMaker.MakeThing(ThingDef.Named("EggHatchery"), null);
                 IntVec3 intVec11 = GenAdj.RandomAdjacentCell8Way(this.pawn.Position);
                 this.eg = (thing3 as Eggs);
-                this.eg.parentIs("D_Cobra");
+                this.eg.parentIs("CobraDomestic");
                 GenSpawn.Spawn(thing3, intVec11);
                 return;
             }
-            if (this.pawn.def.defName == "D_Tortoise")
+            if (this.pawn.def.defName == "TortoiseDomestic")
             {
                 Thing thing4 = ThingMaker.MakeThing(ThingDef.Named("EggHatchery"), null);
                 IntVec3 intVec12 = GenAdj.RandomAdjacentCell8Way(this.pawn.Position);
                 this.eg = (thing4 as Eggs);
-                this.eg.parentIs("D_Tortoise");
+                this.eg.parentIs("TortoiseDomestic");
                 GenSpawn.Spawn(thing4, intVec12);
             }
         }

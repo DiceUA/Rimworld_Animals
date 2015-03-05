@@ -42,51 +42,51 @@ namespace SRP_Fauna
 			if (this.maturityTime == 0) {
 				Pawn pawn = null;
 				if (this.def.defName == "MuffaloKid") {
-					pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("D_Muffalo"), null);
+					pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("MuffaloDomestic"), null);
 				}
 				else {
 					if (this.def.defName == "DeerKid") {
-						pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("D_Deer"), null);
+						pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("DeerDomestic"), null);
 					}
 					else {
 						if (this.def.defName == "SquirrelKid") {
-							pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("D_Squirrel"), null);
+							pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("SquirrelDomestic"), null);
 						}
 						else {
 							if (this.def.defName == "BoomratKid") {
-								pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("D_Boomrat"), null);
+								pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("BoomratDomestic"), null);
 							}
 							else {
 								if (this.def.defName == "MegascarabKid") {
-									pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("D_Megascarab"), null);
+									pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("MegascarabDomestic"), null);
 								}
 								else {
 									if (this.def.defName == "IguanaKid") {
-										pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("D_Iguana"), null);
+										pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("IguanaDomestic"), null);
 									}
 									else {
 										if (this.def.defName == "CobraKid") {
-											pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("D_Cobra"), null);
+											pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("CobraDomestic"), null);
 										}
 										else {
 											if (this.def.defName == "DromedaryKid") {
-												pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("D_Dromedary"), null);
+												pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("DromedaryDomestic"), null);
 											}
 											else {
 												if (this.def.defName == "MonkeyKid") {
-													pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("D_Monkey"), null);
+													pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("MonkeyDomestic"), null);
 												}
 												else {
 													if (this.def.defName == "RhinocerosKid") {
-														pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("D_Rhinoceros"), null);
+														pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("RhinocerosDomestic"), null);
 													}
 													else {
 														if (this.def.defName == "TortoiseKid") {
-															pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("D_Tortoise"), null);
+															pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("TortoiseDomestic"), null);
 														}
 														else {
 															if (this.def.defName == "BoarKid") {
-																pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("D_Boar"), null);
+																pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("BoarDomestic"), null);
 															}
 														}
 													}

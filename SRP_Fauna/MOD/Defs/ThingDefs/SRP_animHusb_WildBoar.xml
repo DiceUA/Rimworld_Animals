@@ -87,8 +87,8 @@
 
    <!-- ============================ Domesticated Animals Race ========================== -->
 
-   <ThingDef ParentName="BaseAnimal" Name="D_Boar">
-      <defName>D_Boar</defName>
+   <ThingDef ParentName="BaseAnimal" Name="BoarDomestic">
+      <defName>BoarDomestic</defName>
       <thingClass>SRP_Fauna.FarmAnimal</thingClass>
       <label>Domesticated Boar</label>
       <description>A domesticated boar.</description>
@@ -137,7 +137,7 @@
       </race>
    </ThingDef>
 
-   <ThingDef ParentName="D_Boar" Name="BoarBaby">
+   <ThingDef ParentName="BoarDomestic" Name="BoarBaby">
       <defName>BoarKid</defName>
       <thingClass>SRP_Fauna.KidAnimal</thingClass>
       <label>Boar Kid</label>

@@ -149,51 +149,51 @@ namespace SRP_Fauna
 		public void Impregnate ()
 		{
 			if (this.gender == Gender.Female) {
-				if (this.def.defName == "D_Muffalo") {
+				if (this.def.defName == "MuffaloDomestic") {
 					this.PregnancyTime = 300000;
 					return;
 				}
-				if (this.def.defName == "D_Deer") {
+				if (this.def.defName == "DeerDomestic") {
 					this.PregnancyTime = 265000;
 					return;
 				}
-				if (this.def.defName == "D_Squirrel") {
+				if (this.def.defName == "SquirrelDomestic") {
 					this.PregnancyTime = 190000;
 					return;
 				}
-				if (this.def.defName == "D_Boomrat") {
+				if (this.def.defName == "BoomratDomestic") {
 					this.PregnancyTime = 210000;
 					return;
 				}
-				if (this.def.defName == "D_Megascarab") {
+				if (this.def.defName == "MegascarabDomestic") {
 					this.PregnancyTime = 150000;
 					return;
 				}
-				if (this.def.defName == "D_Iguana") {
+				if (this.def.defName == "IguanaDomestic") {
 					this.PregnancyTime = 180000;
 					return;
 				}
-				if (this.def.defName == "D_Cobra") {
+				if (this.def.defName == "CobraDomestic") {
 					this.PregnancyTime = 170000;
 					return;
 				}
-				if (this.def.defName == "D_Dromedary") {
+				if (this.def.defName == "DromedaryDomestic") {
 					this.PregnancyTime = 295000;
 					return;
 				}
-				if (this.def.defName == "D_Monkey") {
+				if (this.def.defName == "MonkeyDomestic") {
 					this.PregnancyTime = 230000;
 					return;
 				}
-				if (this.def.defName == "D_Rhinoceros") {
+				if (this.def.defName == "RhinocerosDomestic") {
 					this.PregnancyTime = 320000;
 					return;
 				}
-				if (this.def.defName == "D_Tortoise") {
+				if (this.def.defName == "TortoiseDomestic") {
 					this.PregnancyTime = 190000;
 					return;
 				}
-				if (this.def.defName == "D_Boar") {
+				if (this.def.defName == "BoarDomestic") {
 					this.PregnancyTime = 270000;
 				}
 			}

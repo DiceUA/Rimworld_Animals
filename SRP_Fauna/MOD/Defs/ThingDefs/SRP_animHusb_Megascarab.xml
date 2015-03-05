@@ -79,8 +79,8 @@
 
    <!-- ============================ Domesticated Animals Race ========================== -->
 
-   <ThingDef ParentName="BaseAnimal" Name="D_Megascarab">
-      <defName>D_Megascarab</defName>
+   <ThingDef ParentName="BaseAnimal" Name="MegascarabDomestic">
+      <defName>MegascarabDomestic</defName>
       <thingClass>SRP_Fauna.FarmAnimal</thingClass>
       <label>Domesticated Megascarab</label>
       <description>A domesticated Megascarab</description>
@@ -121,7 +121,7 @@
       </race>
    </ThingDef>
 
-   <ThingDef ParentName="D_Megascarab" Name="MegascarabBaby">
+   <ThingDef ParentName="MegascarabDomestic" Name="MegascarabBaby">
       <defName>MegascarabKid</defName>
       <thingClass>SRP_Fauna.KidAnimal</thingClass>
       <label>Megascarab Kid</label>

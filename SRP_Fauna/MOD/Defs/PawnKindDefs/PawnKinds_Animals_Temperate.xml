@@ -18,9 +18,9 @@
    </PawnKindDef>
 
    <PawnKindDef>
-      <defName>D_Deer</defName>
+      <defName>DeerDomestic</defName>
       <label>Domesticated Deer</label>
-      <race>D_Deer</race>
+      <race>DeerDomestic</race>
       <pointsCost>10</pointsCost>
       <standardBodyGraphicPath>Things/Pawn/Animal/Deer</standardBodyGraphicPath>
       <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
@@ -51,9 +51,9 @@
    </PawnKindDef>
 
    <PawnKindDef>
-      <defName>D_Tortoise</defName>
+      <defName>TortoiseDomestic</defName>
       <label>Domesticated Tortoise</label>
-      <race>D_Tortoise</race>
+      <race>TortoiseDomestic</race>
       <pointsCost>10</pointsCost>
       <standardBodyGraphicPath>Things/Pawn/Animal/Tortoise</standardBodyGraphicPath>
       <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
@@ -84,9 +84,9 @@
   </PawnKindDef>
 
   <PawnKindDef>
-    <defName>D_Furx</defName>
+    <defName>FurxDomestic</defName>
     <label>Domesticated Furx</label>
-    <race>D_Furx</race>
+    <race>FurxDomestic</race>
     <pointsCost>10</pointsCost>
     <standardBodyGraphicPath>Things/Pawn/Animals/Furx</standardBodyGraphicPath>
     <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
@@ -176,9 +176,9 @@
   </PawnKindDef>
 
   <PawnKindDef>
-    <defName>D_Rimram</defName>
+    <defName>RimramDomestic</defName>
     <label>Domesticated Rimram</label>
-    <race>D_Rimram</race>
+    <race>RimramDomestic</race>
     <pointsCost>10</pointsCost>
     <standardBodyGraphicPath>Things/Pawn/Animals/Rimram</standardBodyGraphicPath>
     <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
@@ -213,9 +213,9 @@
   </PawnKindDef>
 
   <PawnKindDef>
-    <defName>D_Rimwolf</defName>
+    <defName>RimwolfDomestic</defName>
     <label>Domesticated Rimwolf</label>
-    <race>D_Rimwolf</race>
+    <race>RimwolfDomestic</race>
     <pointsCost>10</pointsCost>
     <standardBodyGraphicPath>Things/Pawn/Animals/Rimwolf</standardBodyGraphicPath>
     <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
@@ -250,9 +250,9 @@
   </PawnKindDef>
 
   <PawnKindDef>
-    <defName>D_Snork</defName>
+    <defName>SnorkDomestic</defName>
     <label>Domesticated Snork</label>
-    <race>D_Snork</race>
+    <race>SnorkDomestic</race>
     <pointsCost>10</pointsCost>
     <standardBodyGraphicPath>Things/Pawn/Animals/Snork</standardBodyGraphicPath>
     <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>

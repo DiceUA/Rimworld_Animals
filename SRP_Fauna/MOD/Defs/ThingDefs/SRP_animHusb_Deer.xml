@@ -95,8 +95,8 @@
 
    <!-- ============================ Domesticated Animals Race ========================== -->
 
-   <ThingDef ParentName="BaseAnimal" Name="D_Deer">
-      <defName>D_Deer</defName>
+   <ThingDef ParentName="BaseAnimal" Name="DeerDomestic">
+      <defName>DeerDomestic</defName>
       <thingClass>SRP_Fauna.FarmAnimal</thingClass>
       <label>Domesticated Deer</label>
       <description>A domesticated Deer.</description>
@@ -153,7 +153,7 @@
       </race>
    </ThingDef>
 
-   <ThingDef ParentName="D_Deer" Name="DeerBaby">
+   <ThingDef ParentName="DeerDomestic" Name="DeerBaby">
       <defName>DeerKid</defName>
       <thingClass>SRP_Fauna.KidAnimal</thingClass>
       <label>Deer Kid</label>

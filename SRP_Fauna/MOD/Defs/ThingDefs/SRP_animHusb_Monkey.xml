@@ -89,8 +89,8 @@
 
    <!-- ============================ Domesticated Animals Race ========================== -->
 
-   <ThingDef ParentName="BaseAnimal" Name="D_Monkey">
-      <defName>D_Monkey</defName>
+   <ThingDef ParentName="BaseAnimal" Name="MonkeyDomestic">
+      <defName>MonkeyDomestic</defName>
       <thingClass>SRP_Fauna.FarmAnimal</thingClass>
       <label>Domesticated Monkey</label>
       <description>A domesticated monkey.</description>
@@ -141,7 +141,7 @@
       </race>
    </ThingDef>
 
-   <ThingDef ParentName="D_Monkey" Name="MonkeyBaby">
+   <ThingDef ParentName="MonkeyDomestic" Name="MonkeyBaby">
       <defName>MonkeyKid</defName>
       <thingClass>SRP_Fauna.KidAnimal</thingClass>
       <label>Monkey Kid</label>

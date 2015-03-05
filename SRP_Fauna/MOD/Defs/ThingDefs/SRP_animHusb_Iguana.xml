@@ -92,8 +92,8 @@
 
    <!-- ============================ Domesticated Animals Race ========================== -->
 
-   <ThingDef ParentName="BaseAnimal" Name="D_Iguana">
-      <defName>D_Iguana</defName>
+   <ThingDef ParentName="BaseAnimal" Name="IguanaDomestic">
+      <defName>IguanaDomestic</defName>
       <thingClass>SRP_Fauna.FarmAnimal</thingClass>
       <label>Domesticated Iguana</label>
       <description>A domesticated Iguana</description>
@@ -147,7 +147,7 @@
       </race>
    </ThingDef>
 
-   <ThingDef ParentName="D_Iguana" Name="IguanaBaby">
+   <ThingDef ParentName="IguanaDomestic" Name="IguanaBaby">
       <defName>IguanaKid</defName>
       <thingClass>SRP_Fauna.KidAnimal</thingClass>
       <label>Iguana Kid</label>

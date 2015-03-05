@@ -14,9 +14,9 @@
    </PawnKindDef>
 
    <PawnKindDef>
-      <defName>D_Cobra</defName>
+      <defName>CobraDomestic</defName>
       <label>Domesticated Cobra</label>
-      <race>D_Cobra</race>
+      <race>CobraDomestic</race>
       <pointsCost>10</pointsCost>
       <standardBodyGraphicPath>Things/Pawn/Animal/Cobra</standardBodyGraphicPath>
       <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSnake</dessicatedBodygraphicPath>
@@ -51,9 +51,9 @@
    </PawnKindDef>
 
    <PawnKindDef>
-      <defName>D_Monkey</defName>
+      <defName>MonkeyDomestic</defName>
       <label>Domesticated Monkey</label>
-      <race>D_Monkey</race>
+      <race>MonkeyDomestic</race>
       <pointsCost>10</pointsCost>
       <standardBodyGraphicPath>Things/Pawn/Animal/Monkey</standardBodyGraphicPath>
       <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedMedium</dessicatedBodygraphicPath>
@@ -88,9 +88,9 @@
    </PawnKindDef>
 
    <PawnKindDef>
-      <defName>D_Boar</defName>
+      <defName>BoarDomestic</defName>
       <label>Domesticated Boar</label>
-      <race>D_Boar</race>
+      <race>BoarDomestic</race>
       <pointsCost>10</pointsCost>
       <standardBodyGraphicPath>Things/Pawn/Animal/WildBoar</standardBodyGraphicPath>
       <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedMedium</dessicatedBodygraphicPath>
@@ -125,9 +125,9 @@
   </PawnKindDef>
 
   <PawnKindDef>
-    <defName>D_Lacosdile</defName>
+    <defName>LacosdileDomestic</defName>
     <label>Domesticated Lacosdile</label>
-    <race>D_Lacosdile</race>
+    <race>LacosdileDomestic</race>
     <pointsCost>10</pointsCost>
     <standardBodyGraphicPath>Things/Pawn/Animals/Lacosdile</standardBodyGraphicPath>
     <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
@@ -158,9 +158,9 @@
   </PawnKindDef>
 
   <PawnKindDef>
-    <defName>D_Megaslug</defName>
+    <defName>MegaslugDomestic</defName>
     <label>Domesticated Megaslug</label>
-    <race>D_Megaslug</race>
+    <race>MegaslugDomestic</race>
     <pointsCost>10</pointsCost>
     <standardBodyGraphicPath>Things/Pawn/Animals/Megaslug</standardBodyGraphicPath>
     <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>

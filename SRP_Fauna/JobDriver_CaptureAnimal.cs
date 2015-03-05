@@ -53,73 +53,73 @@ namespace SRP_Fauna
         {
             if (this.animal.def.defName == "Muffalo")
             {
-                this.animalKind = "D_Muffalo";
+                this.animalKind = "MuffaloDomestic";
             }
             else
             {
                 if (this.animal.def.defName == "Deer")
                 {
-                    this.animalKind = "D_Deer";
+                    this.animalKind = "DeerDomestic";
                 }
                 else
                 {
                     if (this.animal.def.defName == "Squirrel")
                     {
-                        this.animalKind = "D_Squirrel";
+                        this.animalKind = "SquirrelDomestic";
                     }
                     else
                     {
                         if (this.animal.def.defName == "Boomrat")
                         {
-                            this.animalKind = "D_Boomrat";
+                            this.animalKind = "BoomratDomestic";
                         }
                         else
                         {
                             if (this.animal.def.defName == "Megascarab")
                             {
-                                this.animalKind = "D_Megascarab";
+                                this.animalKind = "MegascarabDomestic";
                             }
                             else
                             {
                                 if (this.animal.def.defName == "Iguana")
                                 {
-                                    this.animalKind = "D_Iguana";
+                                    this.animalKind = "IguanaDomestic";
                                 }
                                 else
                                 {
                                     if (this.animal.def.defName == "Cobra")
                                     {
-                                        this.animalKind = "D_Cobra";
+                                        this.animalKind = "CobraDomestic";
                                     }
                                     else
                                     {
                                         if (this.animal.def.defName == "Dromedary")
                                         {
-                                            this.animalKind = "D_Dromedary";
+                                            this.animalKind = "DromedaryDomestic";
                                         }
                                         else
                                         {
                                             if (this.animal.def.defName == "Monkey")
                                             {
-                                                this.animalKind = "D_Monkey";
+                                                this.animalKind = "MonkeyDomestic";
                                             }
                                             else
                                             {
                                                 if (this.animal.def.defName == "Rhinoceros")
                                                 {
-                                                    this.animalKind = "D_Rhinoceros";
+                                                    this.animalKind = "RhinocerosDomestic";
                                                 }
                                                 else
                                                 {
                                                     if (this.animal.def.defName == "Tortoise")
                                                     {
-                                                        this.animalKind = "D_Tortoise";
+                                                        this.animalKind = "TortoiseDomestic";
                                                     }
                                                     else
                                                     {
                                                         if (this.animal.def.defName == "WildBoar")
                                                         {
-                                                            this.animalKind = "D_Boar";
+                                                            this.animalKind = "BoarDomestic";
                                                         }
                                                     }
                                                 }

@@ -92,8 +92,8 @@
 
    <!-- ============================ Domesticated Animals Race ========================== -->
 
-   <ThingDef ParentName="BaseAnimal" Name="D_Boomrat">
-      <defName>D_Boomrat</defName>
+   <ThingDef ParentName="BaseAnimal" Name="BoomratDomestic">
+      <defName>BoomratDomestic</defName>
       <thingClass>SRP_Fauna.FarmAnimal</thingClass>
       <label>Domesticated Boomrat</label>
       <description>A domesticated Boomrat</description>
@@ -147,7 +147,7 @@
       </race>
    </ThingDef>
 
-   <ThingDef ParentName="D_Boomrat" Name="BoomratBaby">
+   <ThingDef ParentName="BoomratDomestic" Name="BoomratBaby">
       <defName>BoomratKid</defName>
       <thingClass>SRP_Fauna.KidAnimal</thingClass>
       <label>Boomrat Kid</label>

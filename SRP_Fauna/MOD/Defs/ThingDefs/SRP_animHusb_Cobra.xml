@@ -78,8 +78,8 @@
 
    <!-- ============================ Domesticated Animals Race ========================== -->
 
-   <ThingDef ParentName="BaseAnimal" Name="D_Cobra">
-      <defName>D_Cobra</defName>
+   <ThingDef ParentName="BaseAnimal" Name="CobraDomestic">
+      <defName>CobraDomestic</defName>
       <thingClass>SRP_Fauna.FarmAnimal</thingClass>
       <label>Domesticated Cobra</label>
       <description>A domesticated cobra.</description>
@@ -120,7 +120,7 @@
       </race>
    </ThingDef>
 
-   <ThingDef ParentName="D_Cobra" Name="CobraBaby">
+   <ThingDef ParentName="CobraDomestic" Name="CobraBaby">
       <defName>CobraKid</defName>
       <thingClass>SRP_Fauna.KidAnimal</thingClass>
       <label>Cobra Kid</label>

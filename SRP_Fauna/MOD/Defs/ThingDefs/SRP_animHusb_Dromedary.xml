@@ -92,8 +92,8 @@
 
    <!-- ============================ Domesticated Animals Race ========================== -->
 
-   <ThingDef ParentName="BaseAnimal" Name="D_Dromedary">
-      <defName>D_Dromedary</defName>
+   <ThingDef ParentName="BaseAnimal" Name="DromedaryDomestic">
+      <defName>DromedaryDomestic</defName>
       <thingClass>SRP_Fauna.FarmAnimal</thingClass>
       <label>Domesticated Dromedary</label>
       <description>A domesticated dromedary</description>
@@ -148,7 +148,7 @@
       </race>
    </ThingDef>
 
-   <ThingDef ParentName="D_Dromedary" Name="DromedaryBaby">
+   <ThingDef ParentName="DromedaryDomestic" Name="DromedaryBaby">
       <defName>DromedaryKid</defName>
       <thingClass>SRP_Fauna.KidAnimal</thingClass>
       <label>Dromedary Kid</label>

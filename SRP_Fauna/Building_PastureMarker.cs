@@ -37,7 +37,7 @@ namespace SRP_Fauna
 		{
 			if (this.choice == 0) {
 				List<Pawn> list = (from p in Find.ListerPawns.AllPawns
-				where p.def.defName == "D_Boomrat" || p.def.defName == "D_Cobra" || p.def.defName == "D_Deer" || p.def.defName == "D_Dromedary" || p.def.defName == "D_Iguana" || p.def.defName == "D_Megascarab" || p.def.defName == "D_Monkey" || p.def.defName == "D_Muffalo" || p.def.defName == "D_Rhinoceros" || p.def.defName == "D_Squirrel" || p.def.defName == "D_Tortoise" || p.def.defName == "D_Boar"
+				where p.def.defName == "BoomratDomestic" || p.def.defName == "CobraDomestic" || p.def.defName == "DeerDomestic" || p.def.defName == "DromedaryDomestic" || p.def.defName == "IguanaDomestic" || p.def.defName == "MegascarabDomestic" || p.def.defName == "MonkeyDomestic" || p.def.defName == "MuffaloDomestic" || p.def.defName == "RhinocerosDomestic" || p.def.defName == "SquirrelDomestic" || p.def.defName == "TortoiseDomestic" || p.def.defName == "BoarDomestic"
 				select p).ToList<Pawn> ();
 				List<Pawn> list2 = (from p in Find.ListerPawns.AllPawns
 				where p.def.defName == "BoomratKid" || p.def.defName == "CobraKid" || p.def.defName == "DeerKid" || p.def.defName == "DromedaryKid" || p.def.defName == "IguanaKid" || p.def.defName == "MegascarabKid" || p.def.defName == "MonkeyKid" || p.def.defName == "MuffaloKid" || p.def.defName == "RhinocerosKid" || p.def.defName == "SquirrelKid" || p.def.defName == "TortoiseKid" || p.def.defName == "BoarKid"
@@ -165,62 +165,62 @@ namespace SRP_Fauna
 				this.choice = 0;
 			}
 			if (this.choice == 1) {
-				this.animalParent = "D_Boomrat";
+				this.animalParent = "BoomratDomestic";
 				this.animalKid = "BoomratKid";
 				return;
 			}
 			if (this.choice == 2) {
-				this.animalParent = "D_Cobra";
+				this.animalParent = "CobraDomestic";
 				this.animalKid = "CobraKid";
 				return;
 			}
 			if (this.choice == 3) {
-				this.animalParent = "D_Deer";
+				this.animalParent = "DeerDomestic";
 				this.animalKid = "DeerKid";
 				return;
 			}
 			if (this.choice == 4) {
-				this.animalParent = "D_Dromedary";
+				this.animalParent = "DromedaryDomestic";
 				this.animalKid = "DromedaryKid";
 				return;
 			}
 			if (this.choice == 5) {
-				this.animalParent = "D_Iguana";
+				this.animalParent = "IguanaDomestic";
 				this.animalKid = "IguanaKid";
 				return;
 			}
 			if (this.choice == 6) {
-				this.animalParent = "D_Megascarab";
+				this.animalParent = "MegascarabDomestic";
 				this.animalKid = "MegascarabKid";
 				return;
 			}
 			if (this.choice == 7) {
-				this.animalParent = "D_Monkey";
+				this.animalParent = "MonkeyDomestic";
 				this.animalKid = "MonkeyKid";
 				return;
 			}
 			if (this.choice == 8) {
-				this.animalParent = "D_Muffalo";
+				this.animalParent = "MuffaloDomestic";
 				this.animalKid = "MuffaloKid";
 				return;
 			}
 			if (this.choice == 9) {
-				this.animalParent = "D_Rhinoceros";
+				this.animalParent = "RhinocerosDomestic";
 				this.animalKid = "RhinocerosKid";
 				return;
 			}
 			if (this.choice == 10) {
-				this.animalParent = "D_Squirrel";
+				this.animalParent = "SquirrelDomestic";
 				this.animalKid = "SquirrelKid";
 				return;
 			}
 			if (this.choice == 11) {
-				this.animalParent = "D_Tortoise";
+				this.animalParent = "TortoiseDomestic";
 				this.animalKid = "TortoiseKid";
 				return;
 			}
 			if (this.choice == 12) {
-				this.animalParent = "D_Boar";
+				this.animalParent = "BoarDomestic";
 				this.animalKid = "BoarKid";
 			}
 		}

@@ -95,8 +95,8 @@
 
    <!-- ============================ Domesticated Animals Race ========================== -->
 
-   <ThingDef ParentName="BaseAnimal" Name="D_Rhinoceros">
-      <defName>D_Rhinoceros</defName>
+   <ThingDef ParentName="BaseAnimal" Name="RhinocerosDomestic">
+      <defName>RhinocerosDomestic</defName>
       <thingClass>SRP_Fauna.FarmAnimal</thingClass>
       <label>Domesticated Rhinoceros</label>
       <description>A domesticated rhinoceros.</description>
@@ -153,7 +153,7 @@
       </race>
    </ThingDef>
 
-   <ThingDef ParentName="D_Rhinoceros" Name="RhinocerosBaby">
+   <ThingDef ParentName="RhinocerosDomestic" Name="RhinocerosBaby">
       <defName>RhinocerosKid</defName>
       <thingClass>SRP_Fauna.KidAnimal</thingClass>
       <label>Rhinoceros Kid</label>

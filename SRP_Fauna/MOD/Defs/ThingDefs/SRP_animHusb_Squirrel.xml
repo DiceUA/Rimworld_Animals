@@ -92,8 +92,8 @@
 
    <!-- ============================ Domesticated Animals Race ========================== -->
 
-   <ThingDef ParentName="BaseAnimal" Name="D_Squirrel">
-      <defName>D_Squirrel</defName>
+   <ThingDef ParentName="BaseAnimal" Name="SquirrelDomestic">
+      <defName>SquirrelDomestic</defName>
       <thingClass>SRP_Fauna.FarmAnimal</thingClass>
       <label>Domesticated Squirrel</label>
       <description>A domesticated Squirrel</description>
@@ -147,7 +147,7 @@
       </race>
    </ThingDef>
 
-   <ThingDef ParentName="D_Squirrel" Name="SquirrelBaby">
+   <ThingDef ParentName="SquirrelDomestic" Name="SquirrelBaby">
       <defName>SquirrelKid</defName>
       <thingClass>SRP_Fauna.KidAnimal</thingClass>
       <label>Squirrel Kid</label>

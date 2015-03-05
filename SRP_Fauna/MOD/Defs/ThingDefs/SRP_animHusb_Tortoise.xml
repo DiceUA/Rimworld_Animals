@@ -78,8 +78,8 @@
 
    <!-- ============================ Domesticated Animals Race ========================== -->
 
-   <ThingDef ParentName="BaseAnimal" Name="D_Tortoise">
-      <defName>D_Tortoise</defName>
+   <ThingDef ParentName="BaseAnimal" Name="TortoiseDomestic">
+      <defName>TortoiseDomestic</defName>
       <thingClass>SRP_Fauna.FarmAnimal</thingClass>
       <label>Domesticated Tortoise</label>
       <description>A domesticated tortoise.</description>
@@ -119,7 +119,7 @@
       </race>
    </ThingDef>
 
-   <ThingDef ParentName="D_Tortoise" Name="TortoiseBaby">
+   <ThingDef ParentName="TortoiseDomestic" Name="TortoiseBaby">
       <defName>TortoiseKid</defName>
       <thingClass>SRP_Fauna.KidAnimal</thingClass>
       <label>Tortoise Kid</label>

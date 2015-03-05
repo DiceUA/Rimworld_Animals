@@ -85,8 +85,8 @@
 
    <!-- ============================ Domesticated Animals Race ========================== -->
 
-   <ThingDef ParentName="BaseAnimal" Name="D_Muffalo">
-      <defName>D_Muffalo</defName>
+   <ThingDef ParentName="BaseAnimal" Name="MuffaloDomestic">
+      <defName>MuffaloDomestic</defName>
       <thingClass>SRP_Fauna.FarmAnimal</thingClass>
       <label>Domesticated Muffalo</label>
       <description>A domesticated Muffalo.</description>
@@ -133,7 +133,7 @@
       </race>
    </ThingDef>
 
-   <ThingDef ParentName="D_Muffalo" Name="MuffaloBaby">
+   <ThingDef ParentName="MuffaloDomestic" Name="MuffaloBaby">
       <defName>MuffaloKid</defName>
       <thingClass>SRP_Fauna.KidAnimal</thingClass>
       <label>Muffalo Kid</label>

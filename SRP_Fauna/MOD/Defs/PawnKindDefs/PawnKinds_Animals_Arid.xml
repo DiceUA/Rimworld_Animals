@@ -18,9 +18,9 @@
    </PawnKindDef>
 
    <PawnKindDef>
-      <defName>D_Muffalo</defName>
+      <defName>MuffaloDomestic</defName>
       <label>Domesticated Muffalo</label>
-      <race>D_Muffalo</race>
+      <race>MuffaloDomestic</race>
       <pointsCost>30</pointsCost>
       <standardBodygraphicPath>Things/Pawn/Animal/Muffalo</standardBodygraphicPath>
       <dessicatedBodygraphicPath>Things/Pawn/Animal/MuffaloDessicated</dessicatedBodygraphicPath>
@@ -51,9 +51,9 @@
    </PawnKindDef>
 
    <PawnKindDef>
-      <defName>D_Squirrel</defName>
+      <defName>SquirrelDomestic</defName>
       <label>Domesticated Squirrel</label>
-      <race>D_Squirrel</race>
+      <race>SquirrelDomestic</race>
       <pointsCost>5</pointsCost>
       <standardBodygraphicPath>Things/Pawn/Animal/Squirrel</standardBodygraphicPath>
       <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
@@ -84,9 +84,9 @@
    </PawnKindDef>
 
    <PawnKindDef>
-      <defName>D_Boomrat</defName>
+      <defName>BoomratDomestic</defName>
       <label>Domesticated Boomrat</label>
-      <race>D_Boomrat</race>
+      <race>BoomratDomestic</race>
       <pointsCost>10</pointsCost>
       <standardBodygraphicPath>Things/Pawn/Animal/Boomrat</standardBodygraphicPath>
       <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
@@ -117,9 +117,9 @@
    </PawnKindDef>
 
    <PawnKindDef>
-      <defName>D_Megascarab</defName>
+      <defName>MegascarabDomestic</defName>
       <label>Domesticated Megascarab</label>
-      <race>D_Megascarab</race>
+      <race>MegascarabDomestic</race>
       <pointsCost>10</pointsCost>
       <standardBodygraphicPath>Things/Pawn/Animal/Megascarab</standardBodygraphicPath>
       <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
@@ -150,9 +150,9 @@
    </PawnKindDef>
 
    <PawnKindDef>
-      <defName>D_Iguana</defName>
+      <defName>IguanaDomestic</defName>
       <label>Domesticated Iguana</label>
-      <race>D_Iguana</race>
+      <race>IguanaDomestic</race>
       <pointsCost>10</pointsCost>
       <standardBodygraphicPath>Things/Pawn/Animal/Iguana</standardBodygraphicPath>
       <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
@@ -187,9 +187,9 @@
    </PawnKindDef>
 
    <PawnKindDef>
-      <defName>D_Rhinoceros</defName>
+      <defName>RhinocerosDomestic</defName>
       <label>Domesticated Rhinoceros</label>
-      <race>D_Rhinoceros</race>
+      <race>RhinocerosDomestic</race>
       <pointsCost>10</pointsCost>
       <standardBodygraphicPath>Things/Pawn/Animal/Rhino</standardBodygraphicPath>
       <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedMedium</dessicatedBodygraphicPath>
@@ -224,9 +224,9 @@
    </PawnKindDef>
 
    <PawnKindDef>
-      <defName>D_Dromedary</defName>
+      <defName>DromedaryDomestic</defName>
       <label>Domesticated Dromedary</label>
-      <race>D_Dromedary</race>
+      <race>DromedaryDomestic</race>
       <pointsCost>10</pointsCost>
       <standardBodygraphicPath>Things/Pawn/Animal/Dromedary</standardBodygraphicPath>
       <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedMedium</dessicatedBodygraphicPath>
