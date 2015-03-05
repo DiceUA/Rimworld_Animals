@@ -139,9 +139,9 @@
   </PawnKindDef>
 
   <PawnKindDef>
-    <defName>D_Rimdog</defName>
+    <defName>RimdogDomestic</defName>
     <label>Domesticated Rimdog</label>
-    <race>D_Rimdog</race>
+    <race>RimdogDomestic</race>
     <pointsCost>10</pointsCost>
     <standardBodyGraphicPath>Things/Pawn/Animals/Rimdog</standardBodyGraphicPath>
     <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
