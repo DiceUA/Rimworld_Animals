@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Buildings>
+
+   <ThingDef Name="BuildingBase" Abstract="True">
+      <category>Building</category>
+      <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+      <selectable>true</selectable>
+      <drawerType>MapMeshAndRealTime</drawerType>
+      <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+      <repairEffect>Repair</repairEffect>
+   </ThingDef>
+
+   <!-- Tech Tree Minami -->
+
+   <ThingDef ParentName="BuildingBase">
+      <defName>EggHatchery</defName>
+      <eType>BuildingComplex</eType>
+      <label>Eggs</label>
+      <thingClass>SRP_Fauna.Eggs</thingClass>
+      <graphicPath>Things/Pawn/Animals/Eggs</graphicPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <altitudeLayer>Waist</altitudeLayer>
+      <passability>Standable</passability>
+      <statBases>
+         <MaxHealth>10</MaxHealth>
+         <Flammability>1.0</Flammability>
+      </statBases>
+      <tickerType>Normal</tickerType>
+      <description>Animal eggs</description>
+      <size>(1,1)</size>
+      <graphicOverdraw>false</graphicOverdraw>
+      <itemSurface>true</itemSurface>
+      <damageMultipliers>
+         <li>
+            <damageDef>Bomb</damageDef>
+            <multiplier>5</multiplier>
+         </li>
+      </damageMultipliers>
+   </ThingDef>
+
+</Buildings>

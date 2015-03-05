@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResearchProjectDefs>
+   <ResearchProjectDef>
+      <defName>AnimalHusbandry</defName>
+      <label>Animal Husbandry</label>
+      <description>Learn how to successfully capture animals.
+		
+		+ Enables Taming of Wild Animals
+		* Domesticated animals are able to breed with 1 female and male. --Pregnancy does not always occur, you should try to put the ratio of 1 maleanimal : 2 femaleanimals.
+		*You can check if a female animal is pregnant by looking at their Description panel at the lower left side of the screen.</description>
+      <descriptionDiscovered>The "Capture" Button is now available on Wild Animals.</descriptionDiscovered>
+      <totalCost>210</totalCost>
+      <prerequisites />
+   </ResearchProjectDef>
+</ResearchProjectDefs>

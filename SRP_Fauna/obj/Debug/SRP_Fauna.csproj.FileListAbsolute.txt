@@ -1,0 +1,5 @@
+I:\Dev\Projects\SRP_Fauna\SRP_Fauna\bin\Debug\SRP_Fauna.dll
+I:\Dev\Projects\SRP_Fauna\SRP_Fauna\bin\Debug\SRP_Fauna.pdb
+I:\Dev\Projects\SRP_Fauna\SRP_Fauna\obj\Debug\SRP_Fauna.dll
+I:\Dev\Projects\SRP_Fauna\SRP_Fauna\obj\Debug\SRP_Fauna.pdb
+I:\Dev\Projects\SRP_Fauna\SRP_Fauna\obj\Debug\SRP_Fauna.csprojResolveAssemblyReference.cache

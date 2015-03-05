@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ThingDefs>
+
+   <ThingDef Name="BasePawn" Abstract="True">
+      <eType>Pawn</eType>
+      <thingClass>Pawn</thingClass>
+      <category>Pawn</category>
+      <selectable>true</selectable>
+      <tickerType>Normal</tickerType>
+      <altitudeLayer>Pawn</altitudeLayer>
+      <useStandardHealth>false</useStandardHealth>
+      <hasTooltip>true</hasTooltip>
+      <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+      <inspectorTabs>
+         <li>ITab_Pawn_Thoughts</li>
+         <li>ITab_Pawn_Prisoner</li>
+         <li>ITab_Pawn_Gear</li>
+         <li>ITab_Pawn_Character</li>
+         <li>ITab_Pawn_Health</li>
+      </inspectorTabs>
+      <drawGUIOverlay>true</drawGUIOverlay>
+   </ThingDef>
+
+   <ThingDef ParentName="BasePawn" Name="BaseAnimal" Abstract="True">
+      <race>
+         <hasStory>false</hasStory>
+         <needsRest>false</needsRest>
+         <minFoodTaste>Plant</minFoodTaste>
+         <isFlesh>true</isFlesh>
+         <hasLeather>true</hasLeather>
+         <hasGenders>true</hasGenders>
+      </race>
+   </ThingDef>
+
+   <!-- ============================ Wild Animals ========================== -->
+
+   <ThingDef ParentName="BaseAnimal">
+      <defName>Boomrat</defName>
+      <thingClass>SRP_Fauna.Pawn_WildAnimal</thingClass>
+      <label>Wild Boomrat</label>
+      <description>Either by deliberate genetic weaponization, or as an unusual defense mechanism, these rodent-like creatures create a powerful fire-starting explosion when killed.</description>
+      <graphicOverdraw>false</graphicOverdraw>
+      <targetHitChanceFactor>0.6</targetHitChanceFactor>
+      <statBases>
+         <MoveSpeed>5.5</MoveSpeed>
+         <Flammability>1.0</Flammability>
+         <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+      </statBases>
+      <verbs>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>6</meleeDamageBaseAmount>
+            <meleeDamageDef>Scratch</meleeDamageDef>
+            <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+         </li>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>6</meleeDamageBaseAmount>
+            <meleeDamageDef>Scratch</meleeDamageDef>
+            <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+         </li>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>4</meleeDamageBaseAmount>
+            <meleeDamageDef>Bite</meleeDamageDef>
+            <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+         </li>
+      </verbs>
+      <race>
+         <thinkTree>HerbivoreStandard</thinkTree>
+         <hungerRate>0.4</hungerRate>
+         <deathActionType>ExplodeFlame</deathActionType>
+         <body>QuadrupedAnimalWithPaws</body>
+         <bodySize>0.2</bodySize>
+         <healthScale>0.5</healthScale>
+         <diet>Omnivorous</diet>
+         <leatherColor>(115,37,28)</leatherColor>
+      	 <leatherInsulation>1.15</leatherInsulation>
+         <soundWounded>Pawn_Boomrat_Wounded</soundWounded>
+         <soundDeath>Pawn_Boomrat_Death</soundDeath>
+         <soundCall>Pawn_Boomrat_Call</soundCall>
+         <soundAngry>Pawn_Boomrat_Angry</soundAngry>
+         <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+         <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+         <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      </race>
+   </ThingDef>
+
+   <!-- ============================ Domesticated Animals Race ========================== -->
+
+   <ThingDef ParentName="BaseAnimal" Name="D_Boomrat">
+      <defName>D_Boomrat</defName>
+      <thingClass>SRP_Fauna.FarmAnimal</thingClass>
+      <label>Domesticated Boomrat</label>
+      <description>A domesticated Boomrat</description>
+      <graphicOverdraw>false</graphicOverdraw>
+      <targetHitChanceFactor>0.6</targetHitChanceFactor>
+      <statBases>
+         <MoveSpeed>5.5</MoveSpeed>
+         <Flammability>1.0</Flammability>
+         <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+      </statBases>
+      <verbs>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>6</meleeDamageBaseAmount>
+            <meleeDamageDef>Scratch</meleeDamageDef>
+            <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+         </li>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>6</meleeDamageBaseAmount>
+            <meleeDamageDef>Scratch</meleeDamageDef>
+            <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+         </li>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>4</meleeDamageBaseAmount>
+            <meleeDamageDef>Bite</meleeDamageDef>
+            <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+         </li>
+      </verbs>
+      <race>
+         <thinkTree>FarmAnimal</thinkTree>
+         <hungerRate>0.4</hungerRate>
+         <deathActionType>ExplodeFlame</deathActionType>
+         <body>QuadrupedAnimalWithPaws</body>
+         <bodySize>0.2</bodySize>
+         <healthScale>0.5</healthScale>
+         <diet>Omnivorous</diet>
+         <leatherColor>(115,37,28)</leatherColor>
+      	 <leatherInsulation>1.15</leatherInsulation>
+         <soundWounded>Pawn_Boomrat_Wounded</soundWounded>
+         <soundDeath>Pawn_Boomrat_Death</soundDeath>
+         <soundCall>Pawn_Boomrat_Call</soundCall>
+         <soundAngry>Pawn_Boomrat_Angry</soundAngry>
+         <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+         <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+         <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      </race>
+   </ThingDef>
+
+   <ThingDef ParentName="D_Boomrat" Name="BoomratBaby">
+      <defName>BoomratKid</defName>
+      <thingClass>SRP_Fauna.KidAnimal</thingClass>
+      <label>Boomrat Kid</label>
+      <graphicOverdraw>false</graphicOverdraw>
+      <targetHitChanceFactor>1.0</targetHitChanceFactor>
+      <statBases>
+         <MoveSpeed>1.5</MoveSpeed>
+         <Flammability>1.0</Flammability>
+         <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+      </statBases>
+      <verbs>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>2</meleeDamageBaseAmount>
+            <meleeDamageDef>Bite</meleeDamageDef>
+            <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+         </li>
+      </verbs>
+      <race>
+         <hasLeather>false</hasLeather>
+         <healthScale>0.15</healthScale>
+         <hungerRate>0.1</hungerRate>
+         <bodySize>0.05</bodySize>
+      </race>
+   </ThingDef>
+
+</ThingDefs>

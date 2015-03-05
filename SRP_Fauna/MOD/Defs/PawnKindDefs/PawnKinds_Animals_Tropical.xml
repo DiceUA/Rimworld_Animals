@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+   <PawnKindDef>
+      <defName>Cobra</defName>
+      <label>cobra</label>
+      <race>Cobra</race>
+      <pointsCost>75</pointsCost>
+      <standardBodyGraphicPath>Things/Pawn/Animal/Cobra</standardBodyGraphicPath>
+      <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSnake</dessicatedBodygraphicPath>
+      <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+      <wildSpawn_EcoSystemWeight>0.6</wildSpawn_EcoSystemWeight>
+   </PawnKindDef>
+
+   <PawnKindDef>
+      <defName>D_Cobra</defName>
+      <label>Domesticated Cobra</label>
+      <race>D_Cobra</race>
+      <pointsCost>10</pointsCost>
+      <standardBodyGraphicPath>Things/Pawn/Animal/Cobra</standardBodyGraphicPath>
+      <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSnake</dessicatedBodygraphicPath>
+      <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+   </PawnKindDef>
+
+   <PawnKindDef>
+      <defName>CobraKid</defName>
+      <label>CobraKid</label>
+      <race>CobraKid</race>
+      <pointsCost>1</pointsCost>
+      <standardBodyGraphicPath>Things/Pawn/Animals/CobraKid</standardBodyGraphicPath>
+      <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSnake</dessicatedBodygraphicPath>
+      <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+   </PawnKindDef>
+
+   <!-- ========== Cobras ==========  -->
+
+   <PawnKindDef>
+      <defName>Monkey</defName>
+      <label>monkey</label>
+      <race>Monkey</race>
+      <pointsCost>75</pointsCost>
+      <standardBodyGraphicPath>Things/Pawn/Animal/Monkey</standardBodyGraphicPath>
+      <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedMedium</dessicatedBodygraphicPath>
+      <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+      <wildSpawn_EcoSystemWeight>0.9</wildSpawn_EcoSystemWeight>
+      <wildSpawn_GroupSizeRange>
+         <min>3</min>
+         <max>7</max>
+      </wildSpawn_GroupSizeRange>
+   </PawnKindDef>
+
+   <PawnKindDef>
+      <defName>D_Monkey</defName>
+      <label>Domesticated Monkey</label>
+      <race>D_Monkey</race>
+      <pointsCost>10</pointsCost>
+      <standardBodyGraphicPath>Things/Pawn/Animal/Monkey</standardBodyGraphicPath>
+      <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedMedium</dessicatedBodygraphicPath>
+      <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+   </PawnKindDef>
+
+   <PawnKindDef>
+      <defName>MonkeyKid</defName>
+      <label>MonkeyKid</label>
+      <race>MonkeyKid</race>
+      <pointsCost>1</pointsCost>
+      <standardBodyGraphicPath>Things/Pawn/Animals/MonkeyKid</standardBodyGraphicPath>
+      <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedMedium</dessicatedBodygraphicPath>
+      <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+   </PawnKindDef>
+
+   <!-- ========== Monkeys ==========  -->
+
+   <PawnKindDef>
+      <defName>WildBoar</defName>
+      <label>wild boar</label>
+      <race>WildBoar</race>
+      <pointsCost>20</pointsCost>
+      <standardBodyGraphicPath>Things/Pawn/Animal/WildBoar</standardBodyGraphicPath>
+      <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedMedium</dessicatedBodygraphicPath>
+      <wildSpawn_EcoSystemWeight>0.5</wildSpawn_EcoSystemWeight>
+      <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+      <wildSpawn_GroupSizeRange>
+         <min>5</min>
+         <max>10</max>
+      </wildSpawn_GroupSizeRange>
+   </PawnKindDef>
+
+   <PawnKindDef>
+      <defName>D_Boar</defName>
+      <label>Domesticated Boar</label>
+      <race>D_Boar</race>
+      <pointsCost>10</pointsCost>
+      <standardBodyGraphicPath>Things/Pawn/Animal/WildBoar</standardBodyGraphicPath>
+      <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedMedium</dessicatedBodygraphicPath>
+      <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+   </PawnKindDef>
+
+   <PawnKindDef>
+      <defName>BoarKid</defName>
+      <label>BoarKid</label>
+      <race>BoarKid</race>
+      <pointsCost>1</pointsCost>
+      <standardBodyGraphicPath>Things/Pawn/Animal/WildBoar</standardBodyGraphicPath>
+      <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedMedium</dessicatedBodygraphicPath>
+      <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+   </PawnKindDef>
+
+   <!-- ========== Boars ==========  -->
+
+  <PawnKindDef>
+     <defName>Lacosdile</defName>
+     <label>Lacosdile</label>
+     <race>Lacosdile</race>
+     <pointsCost>50</pointsCost>
+     <standardBodygraphicPath>Things/Pawn/Animals/Rimdile</standardBodygraphicPath>
+     <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedMedium</dessicatedBodygraphicPath>
+     <wildSpawn_EcoSystemWeight>0.4</wildSpawn_EcoSystemWeight>
+     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+     <wildSpawn_GroupSizeRange>
+       <min>3</min>
+       <max>6</max>
+     </wildSpawn_GroupSizeRange>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>D_Lacosdile</defName>
+    <label>Domesticated Lacosdile</label>
+    <race>D_Lacosdile</race>
+    <pointsCost>10</pointsCost>
+    <standardBodyGraphicPath>Things/Pawn/Animals/Lacosdile</standardBodyGraphicPath>
+    <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
+    <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>LacosdileKid</defName>
+    <label>LacosdileKid</label>
+    <race>LacosdileKid</race>
+    <pointsCost>1</pointsCost>
+    <standardBodyGraphicPath>Things/Pawn/Animals/Rimdile</standardBodyGraphicPath>
+    <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
+    <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+  </PawnKindDef>
+
+  <!-- ========== Lacosdile ==========  -->
+
+  <PawnKindDef>
+    <defName>Megaslug</defName>
+    <label>Megaslug</label>
+    <race>Megaslug</race>
+    <pointsCost>50</pointsCost>
+    <standardBodygraphicPath>Things/Pawn/Animals/Megaslug</standardBodygraphicPath>
+    <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
+    <wildSpawn_EcoSystemWeight>0.4</wildSpawn_EcoSystemWeight>
+    <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>D_Megaslug</defName>
+    <label>Domesticated Megaslug</label>
+    <race>D_Megaslug</race>
+    <pointsCost>10</pointsCost>
+    <standardBodyGraphicPath>Things/Pawn/Animals/Megaslug</standardBodyGraphicPath>
+    <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
+    <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>MegaslugKid</defName>
+    <label>MegaslugKid</label>
+    <race>MegaslugKid</race>
+    <pointsCost>1</pointsCost>
+    <standardBodyGraphicPath>Things/Pawn/Animals/Megaslug</standardBodyGraphicPath>
+    <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
+    <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+  </PawnKindDef>
+
+  <!-- ========== Megaslug ==========  -->
+  
+</Defs>

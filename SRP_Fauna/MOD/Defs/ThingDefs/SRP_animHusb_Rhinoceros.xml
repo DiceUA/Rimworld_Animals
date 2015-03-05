@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ThingDefs>
+
+   <ThingDef Name="BasePawn" Abstract="True">
+      <eType>Pawn</eType>
+      <thingClass>Pawn</thingClass>
+      <category>Pawn</category>
+      <selectable>true</selectable>
+      <tickerType>Normal</tickerType>
+      <altitudeLayer>Pawn</altitudeLayer>
+      <useStandardHealth>false</useStandardHealth>
+      <hasTooltip>true</hasTooltip>
+      <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+      <inspectorTabs>
+         <li>ITab_Pawn_Thoughts</li>
+         <li>ITab_Pawn_Prisoner</li>
+         <li>ITab_Pawn_Gear</li>
+         <li>ITab_Pawn_Character</li>
+         <li>ITab_Pawn_Health</li>
+      </inspectorTabs>
+      <drawGUIOverlay>true</drawGUIOverlay>
+   </ThingDef>
+
+   <ThingDef ParentName="BasePawn" Name="BaseAnimal" Abstract="True">
+      <race>
+         <hasStory>false</hasStory>
+         <needsRest>false</needsRest>
+         <minFoodTaste>Plant</minFoodTaste>
+         <isFlesh>true</isFlesh>
+         <hasLeather>true</hasLeather>
+         <hasGenders>true</hasGenders>
+      </race>
+   </ThingDef>
+
+   <!-- ============================ Wild Animals ========================== -->
+
+   <ThingDef ParentName="BaseAnimal">
+      <defName>Rhinoceros</defName>
+      <thingClass>SRP_Fauna.Pawn_WildAnimal</thingClass>
+      <label>Wild Rhinoceros</label>
+      <description>This large land mammal is typically quite peaceful, but it will not hesitate to charge with its horn to fend off trespassers.</description>
+      <graphicOverdraw>true</graphicOverdraw>
+      <sunShadowInfo>
+         <baseWidth>0.95</baseWidth>
+         <baseHeight>0.6</baseHeight>
+         <tallness>0.4</tallness>
+      </sunShadowInfo>
+      <targetHitChanceFactor>2.0</targetHitChanceFactor>
+      <statBases>
+         <MoveSpeed>3.00</MoveSpeed>
+         <Flammability>1.0</Flammability>
+      	 <ComfyTemperatureMin>-8</ComfyTemperatureMin>
+      </statBases>
+      <verbs>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>10</meleeDamageBaseAmount>
+            <meleeDamageDef>Scratch</meleeDamageDef>
+            <linkedBodyPartsGroup>HornAttackTool</linkedBodyPartsGroup>
+         </li>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>12</meleeDamageBaseAmount>
+            <meleeDamageDef>Blunt</meleeDamageDef>
+            <linkedBodyPartsGroup>HornAttackTool</linkedBodyPartsGroup>
+         </li>
+      </verbs>
+      <race>
+         <thinkTree>HerbivoreStandard</thinkTree>
+         <hungerRate>0.2</hungerRate>
+         <body>QuadrupedAnimalWithHoovesAndHorn</body>
+         <bodySize>1.33</bodySize>
+         <healthScale>2.5</healthScale>
+         <diet>Herbivorous</diet>
+         <leatherColor>(150,150,150)</leatherColor>
+         <leatherLabel>rhinohide</leatherLabel>
+      	 <leatherStatFactors>
+            <MarketValue>1.5</MarketValue>
+            <ArmorRating_Blunt>2.0</ArmorRating_Blunt>
+            <ArmorRating_Sharp>2.5</ArmorRating_Sharp>
+      	 </leatherStatFactors>
+      	 <leatherInsulation>0.9</leatherInsulation>
+         <soundWounded>Pawn_Muffalo_Wounded</soundWounded>
+         <soundDeath>Pawn_Muffalo_Death</soundDeath>
+         <soundCall>Pawn_Muffalo_Call</soundCall>
+         <soundAngry>Pawn_Muffalo_Angry</soundAngry>
+         <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+         <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+         <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      </race>
+   </ThingDef>
+
+   <!-- ============================ Domesticated Animals Race ========================== -->
+
+   <ThingDef ParentName="BaseAnimal" Name="D_Rhinoceros">
+      <defName>D_Rhinoceros</defName>
+      <thingClass>SRP_Fauna.FarmAnimal</thingClass>
+      <label>Domesticated Rhinoceros</label>
+      <description>A domesticated rhinoceros.</description>
+      <graphicOverdraw>true</graphicOverdraw>
+      <sunShadowInfo>
+         <baseWidth>0.95</baseWidth>
+         <baseHeight>0.6</baseHeight>
+         <tallness>0.4</tallness>
+      </sunShadowInfo>
+      <targetHitChanceFactor>2.0</targetHitChanceFactor>
+      <statBases>
+         <MoveSpeed>3.00</MoveSpeed>
+         <Flammability>1.0</Flammability>
+      	 <ComfyTemperatureMin>-8</ComfyTemperatureMin>
+      </statBases>
+      <verbs>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>10</meleeDamageBaseAmount>
+            <meleeDamageDef>Scratch</meleeDamageDef>
+            <linkedBodyPartsGroup>HornAttackTool</linkedBodyPartsGroup>
+         </li>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>12</meleeDamageBaseAmount>
+            <meleeDamageDef>Blunt</meleeDamageDef>
+            <linkedBodyPartsGroup>HornAttackTool</linkedBodyPartsGroup>
+         </li>
+      </verbs>
+      <race>
+         <thinkTree>FarmAnimal</thinkTree>
+         <hungerRate>0.2</hungerRate>
+         <body>QuadrupedAnimalWithHoovesAndHorn</body>
+         <bodySize>1.33</bodySize>
+         <healthScale>2.5</healthScale>
+         <diet>Herbivorous</diet>
+         <leatherColor>(150,150,150)</leatherColor>
+         <leatherLabel>rhinohide</leatherLabel>
+      	 <leatherStatFactors>
+            <MarketValue>1.5</MarketValue>
+            <ArmorRating_Blunt>2.0</ArmorRating_Blunt>
+            <ArmorRating_Sharp>2.5</ArmorRating_Sharp>
+      	 </leatherStatFactors>
+      	 <leatherInsulation>0.9</leatherInsulation>
+         <soundWounded>Pawn_Muffalo_Wounded</soundWounded>
+         <soundDeath>Pawn_Muffalo_Death</soundDeath>
+         <soundCall>Pawn_Muffalo_Call</soundCall>
+         <soundAngry>Pawn_Muffalo_Angry</soundAngry>
+         <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+         <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+         <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      </race>
+   </ThingDef>
+
+   <ThingDef ParentName="D_Rhinoceros" Name="RhinocerosBaby">
+      <defName>RhinocerosKid</defName>
+      <thingClass>SRP_Fauna.KidAnimal</thingClass>
+      <label>Rhinoceros Kid</label>
+      <graphicOverdraw>false</graphicOverdraw>
+      <targetHitChanceFactor>1.0</targetHitChanceFactor>
+      <statBases>
+         <MoveSpeed>1.00</MoveSpeed>
+         <Flammability>1.0</Flammability>
+      	 <ComfyTemperatureMin>-8</ComfyTemperatureMin>
+      </statBases>
+      <verbs>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>1</meleeDamageBaseAmount>
+            <meleeDamageDef>Blunt</meleeDamageDef>
+            <linkedBodyPartsGroup>HornAttackTool</linkedBodyPartsGroup>
+         </li>
+      </verbs>
+      <race>
+         <hasLeather>false</hasLeather>
+         <healthScale>0.1</healthScale>
+         <hungerRate>0.1</hungerRate>
+         <bodySize>0.05</bodySize>
+      </race>
+   </ThingDef>
+
+</ThingDefs>

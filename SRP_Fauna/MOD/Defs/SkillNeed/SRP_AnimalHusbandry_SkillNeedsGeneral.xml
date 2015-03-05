@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<SkillNeed>
+
+   <!-- Capturing Animals -->
+
+   <SkillNeed Class="SkillNeed_BaseBonus">
+      <defName>CapturingRate</defName>
+      <skill>Social</skill>
+      <baseFactor>0</baseFactor>
+      <bonusFactor>0.02</bonusFactor>
+      <description>Captures animals at {0}% success rate.</description>
+   </SkillNeed>
+
+</SkillNeed>

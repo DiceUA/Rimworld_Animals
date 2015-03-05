@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<WorkTypeDefs>
+
+   <WorkTypeDef>
+      <defName>Warden</defName>
+      <pawnLabel>Warden</pawnLabel>
+      <gerundLabel>Warden</gerundLabel>
+      <description>Wardens visit prisoners to recruit them, have a nice chat, beat them, or execute them - whatever you have decided. Wardens also deliver food to prisoners.
+		
+		Wardens also capture animals.</description>
+      <verb>Handle</verb>
+      <naturalPriority>1100</naturalPriority>
+      <relevantSkills>
+         <li>Social</li>
+      </relevantSkills>
+      <workTags>
+         <li>Social</li>
+      </workTags>
+   </WorkTypeDef>
+
+</WorkTypeDefs>

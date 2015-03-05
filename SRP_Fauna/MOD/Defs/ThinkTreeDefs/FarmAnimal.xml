@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ThinkTrees>
+
+   <ThinkTreeDef>
+      <defName>FarmAnimal</defName>
+      <thinkRoot Class="ThinkNode_Priority">
+         <subNodes>
+            <li Class="ThinkNode_Subtree">
+               <treeDef>BurningResponse</treeDef>
+            </li>
+            <li Class="ThinkNode_Subtree">
+               <treeDef>Psychotic</treeDef>
+            </li>
+            <li Class="ThinkNode_Subtree">
+               <treeDef>SelfDefense</treeDef>
+            </li>
+            <!-- Insertion hook for modders -->
+            <li Class="ThinkNode_SubtreesByTag">
+               <insertTag>HerbivoreStandard_PreSatisfyNeeds</insertTag>
+            </li>
+            <li Class="JobGiver_SatisfyNeeds" />
+            <!-- Insertion hook for modders -->
+            <li Class="ThinkNode_SubtreesByTag">
+               <insertTag>HerbivoreStandard_PreWander</insertTag>
+            </li>
+            <li Class="SRP_Fauna.JobGiver_WanderPasture" />
+            <li Class="JobGiver_IdleError" />
+         </subNodes>
+      </thinkRoot>
+   </ThinkTreeDef>
+
+</ThinkTrees>

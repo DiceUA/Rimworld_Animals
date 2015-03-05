@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ThingDefs>
+
+   <ThingDef Name="BasePawn" Abstract="True">
+      <eType>Pawn</eType>
+      <thingClass>Pawn</thingClass>
+      <category>Pawn</category>
+      <selectable>true</selectable>
+      <tickerType>Normal</tickerType>
+      <altitudeLayer>Pawn</altitudeLayer>
+      <useStandardHealth>false</useStandardHealth>
+      <hasTooltip>true</hasTooltip>
+      <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+      <inspectorTabs>
+         <li>ITab_Pawn_Thoughts</li>
+         <li>ITab_Pawn_Prisoner</li>
+         <li>ITab_Pawn_Gear</li>
+         <li>ITab_Pawn_Character</li>
+         <li>ITab_Pawn_Health</li>
+      </inspectorTabs>
+      <drawGUIOverlay>true</drawGUIOverlay>
+   </ThingDef>
+   <ThingDef ParentName="BasePawn" Name="BaseAnimal" Abstract="True">
+      <race>
+         <hasStory>false</hasStory>
+         <needsRest>false</needsRest>
+         <minFoodTaste>Plant</minFoodTaste>
+         <isFlesh>true</isFlesh>
+         <hasLeather>true</hasLeather>
+         <hasGenders>true</hasGenders>
+      </race>
+   </ThingDef>
+
+   <!-- ============================ Wild Animals ========================== -->
+
+   <ThingDef ParentName="BaseAnimal">
+      <defName>Dromedary</defName>
+      <thingClass>SRP_Fauna.Pawn_WildAnimal</thingClass>
+      <label>Wild Dromedary</label>
+      <description>Adapted to survival in arid environments, this distant cousin of the horse can go nearly a week without water.</description>
+      <graphicOverdraw>true</graphicOverdraw>
+      <sunShadowInfo>
+         <baseWidth>0.5</baseWidth>
+         <baseHeight>0.5</baseHeight>
+         <tallness>0.5</tallness>
+      </sunShadowInfo>
+      <targetHitChanceFactor>1.3</targetHitChanceFactor>
+      <statBases>
+         <MoveSpeed>2.9</MoveSpeed>
+         <Flammability>1.0</Flammability>
+      	 <ComfyTemperatureMin>-15</ComfyTemperatureMin>
+      </statBases>
+      <verbs>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+            <meleeDamageDef>Blunt</meleeDamageDef>
+            <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+         </li>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+            <meleeDamageDef>Blunt</meleeDamageDef>
+            <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+         </li>
+      </verbs>
+      <race>
+         <thinkTree>HerbivoreStandard</thinkTree>
+         <hungerRate>0.7</hungerRate>
+         <body>QuadrupedAnimalWithHoovesAndHump</body>
+         <bodySize>1.1</bodySize>
+         <healthScale>1.1</healthScale>
+         <diet>Herbivorous</diet>
+         <leatherColor>(204,180,150)</leatherColor>
+      	 <leatherInsulation>1.25</leatherInsulation>
+         <soundCallIntervalRange>
+            <min>3500</min>
+            <max>6000</max>
+         </soundCallIntervalRange>
+         <soundWounded>Pawn_Antelope_Wounded</soundWounded>
+         <soundDeath>Pawn_Antelope_Death</soundDeath>
+         <soundCall>Pawn_Antelope_Call</soundCall>
+         <soundAngry>Pawn_Antelope_Angry</soundAngry>
+         <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+         <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+         <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      </race>
+   </ThingDef>
+
+   <!-- ============================ Domesticated Animals Race ========================== -->
+
+   <ThingDef ParentName="BaseAnimal" Name="D_Dromedary">
+      <defName>D_Dromedary</defName>
+      <thingClass>SRP_Fauna.FarmAnimal</thingClass>
+      <label>Domesticated Dromedary</label>
+      <description>A domesticated dromedary</description>
+      <graphicOverdraw>true</graphicOverdraw>
+      <sunShadowInfo>
+         <baseWidth>0.5</baseWidth>
+         <baseHeight>0.5</baseHeight>
+         <tallness>0.5</tallness>
+      </sunShadowInfo>
+      <targetHitChanceFactor>1.3</targetHitChanceFactor>
+      <statBases>
+         <MoveSpeed>2.9</MoveSpeed>
+         <Flammability>1.0</Flammability>
+      	 <ComfyTemperatureMin>-15</ComfyTemperatureMin>
+      </statBases>
+      <verbs>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+            <meleeDamageDef>Blunt</meleeDamageDef>
+            <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+         </li>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+            <meleeDamageDef>Blunt</meleeDamageDef>
+            <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+         </li>
+      </verbs>
+      <race>
+         <thinkTree>FarmAnimal</thinkTree>
+         <hungerRate>0.7</hungerRate>
+         <body>QuadrupedAnimalWithHoovesAndHump</body>
+         <bodySize>1.1</bodySize>
+         <healthScale>1.1</healthScale>
+         <diet>Herbivorous</diet>
+         <leatherColor>(204,180,150)</leatherColor>
+      	 <leatherInsulation>1.25</leatherInsulation>
+         <soundCallIntervalRange>
+            <min>3500</min>
+            <max>6000</max>
+         </soundCallIntervalRange>
+         <soundWounded>Pawn_Antelope_Wounded</soundWounded>
+         <soundDeath>Pawn_Antelope_Death</soundDeath>
+         <soundCall>Pawn_Antelope_Call</soundCall>
+         <soundAngry>Pawn_Antelope_Angry</soundAngry>
+         <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+         <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+         <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      </race>
+   </ThingDef>
+
+   <ThingDef ParentName="D_Dromedary" Name="DromedaryBaby">
+      <defName>DromedaryKid</defName>
+      <thingClass>SRP_Fauna.KidAnimal</thingClass>
+      <label>Dromedary Kid</label>
+      <graphicOverdraw>false</graphicOverdraw>
+      <targetHitChanceFactor>1.0</targetHitChanceFactor>
+      <statBases>
+         <MoveSpeed>1.00</MoveSpeed>
+         <Flammability>1.0</Flammability>
+      	 <ComfyTemperatureMin>-15</ComfyTemperatureMin>
+      </statBases>
+      <verbs>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>1</meleeDamageBaseAmount>
+            <meleeDamageDef>Blunt</meleeDamageDef>
+            <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+         </li>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>1</meleeDamageBaseAmount>
+            <meleeDamageDef>Blunt</meleeDamageDef>
+            <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+         </li>
+      </verbs>
+      <race>
+         <hasLeather>false</hasLeather>
+         <healthScale>0.02</healthScale>
+         <hungerRate>0.1</hungerRate>
+         <bodySize>0.01</bodySize>
+      </race>
+   </ThingDef>
+
+</ThingDefs>

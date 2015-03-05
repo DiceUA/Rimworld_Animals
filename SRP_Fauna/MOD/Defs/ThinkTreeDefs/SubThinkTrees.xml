@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThinkTrees>
+
+  <!--============= Animal attack nearby pawn ============-->
+  <ThinkTreeDef>
+    <defName>AttackNearbyNonAnimalPawns</defName>
+    <thinkRoot Class="SRP_Fauna.ThinkNode_ConditionalPawnNearby">
+	  <AttackOtherAnimals>false</AttackOtherAnimals>
+      <subNodes>
+        <li Class="SRP_Fauna.JobGiver_AttackNearbyTargetPawn" />
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+  
+  <ThinkTreeDef>
+    <defName>AttackNearbyPawns</defName>
+    <thinkRoot Class="SRP_Fauna.ThinkNode_ConditionalPawnNearby">
+	  <AttackOtherAnimals>true</AttackOtherAnimals>
+      <subNodes>
+        <li Class="SRP_Fauna.JobGiver_AttackNearbyTargetPawn" />
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+
+</ThinkTrees>

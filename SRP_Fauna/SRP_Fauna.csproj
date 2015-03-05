@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A36BEEB2-7379-475B-B537-827E34571962}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SRP_Fauna</RootNamespace>
+    <AssemblyName>SRP_Fauna</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>Source-DLLs\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>Source-DLLs\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Building_PastureMarker.cs" />
+    <Compile Include="JobDriver_FollowMaster.cs" />
+    <Compile Include="Eggs.cs" />
+    <Compile Include="FarmAnimal.cs" />
+    <Compile Include="JobDriver_CaptureAnimal.cs" />
+    <Compile Include="JobDriver_giveBirth.cs" />
+    <Compile Include="JobDriver_Mate.cs" />
+    <Compile Include="JobGiver_AttackNearbyTargetPawn.cs" />
+    <Compile Include="JobGiver_WanderPasture.cs" />
+    <Compile Include="KidAnimal.cs" />
+    <Compile Include="Pawn_WildAnimal.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThinkNode_ConditionalPawnNearby.cs" />
+    <Compile Include="WorkGiver_CaptureAnimal.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Content Include="bin\Debug\RimWorld_AnimalHusbandry.dll" />
+    <Content Include="bin\Debug\RimWorld_AnimalHusbandry.pdb" />
+    <Content Include="bin\Release\RimWorld_AnimalHusbandry.dll" />
+    <Content Include="bin\Release\RimWorld_AnimalHusbandry.pdb" />
+    <Content Include="MOD\About\About.xml" />
+    <Content Include="MOD\About\Preview.png" />
+    <Content Include="MOD\Defs\BiomeDefs\SRP_Biomes.xml" />
+    <Content Include="MOD\Defs\BodyDefs\SRP_Bodies.xml" />
+    <Content Include="MOD\Defs\BodyPartDefs\SRP_BodyParts.xml" />
+    <Content Include="MOD\Defs\DesignationDefs\SRP_DesignationDefs.xml" />
+    <Content Include="MOD\Defs\JobDefs\SRP_AnimalHusbandryJobDefs.xml" />
+    <Content Include="MOD\Defs\PawnKindDefs\PawnKinds_Animals_Arid.xml" />
+    <Content Include="MOD\Defs\PawnKindDefs\PawnKinds_Animals_Temperate.xml" />
+    <Content Include="MOD\Defs\PawnKindDefs\PawnKinds_Animals_Tropical.xml" />
+    <Content Include="MOD\Defs\ResearchProjectDefs\SRP_ResearchProjects_AnimalHusbandry.xml" />
+    <Content Include="MOD\Defs\SkillNeed\SRP_AnimalHusbandry_SkillNeedsGeneral.xml" />
+    <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Boomrat.xml" />
+    <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Cobra.xml" />
+    <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Deer.xml" />
+    <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Dromedary.xml" />
+    <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Iguana.xml" />
+    <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Megascarab.xml" />
+    <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Monkey.xml" />
+    <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Muffalo.xml" />
+    <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Rhinoceros.xml" />
+    <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Squirrel.xml" />
+    <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Tortoise.xml" />
+    <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_WildBoar.xml" />
+    <Content Include="MOD\Defs\ThingDefs\SRP_Buildings_EggSpawner.xml" />
+    <Content Include="MOD\Defs\ThingDefs\SRP_Buildings_PastureMarker.xml" />
+    <Content Include="MOD\Defs\ThingDefs\SRP_Races.xml" />
+    <Content Include="MOD\Defs\ThinkTreeDefs\CarnivoreAggressive.xml" />
+    <Content Include="MOD\Defs\ThinkTreeDefs\FarmAnimal.xml" />
+    <Content Include="MOD\Defs\ThinkTreeDefs\HerbivoreAggressive.xml" />
+    <Content Include="MOD\Defs\ThinkTreeDefs\SubThinkTrees.xml" />
+    <Content Include="MOD\Defs\ThoughtDefs\SRP_AnimalHusbandry_MemoryThoughts.xml" />
+    <Content Include="MOD\Defs\WorkGiverDefs\SRP_AnimalHusbandry_WorkGivers.xml" />
+    <Content Include="MOD\Defs\WorkTypeDefs\SRP_WorkTypes.xml" />
+    <Content Include="MOD\Textures\Buttons\CaptureAnimal.png" />
+    <Content Include="MOD\Textures\Buttons\Follow.png" />
+    <Content Include="MOD\Textures\Buttons\Switch.png" />
+    <Content Include="MOD\Textures\PastureMarker.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\AMuffalo_back.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\AMuffalo_front.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\AMuffalo_side.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\asd\CobraKid_back.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\asd\CobraKid_front.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\asd\CobraKid_side.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\asd\MonkeyKid_back.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\asd\MonkeyKid_front.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\asd\MonkeyKid_side.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\asd\TortoiseKid_back.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\asd\TortoiseKid_front.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\asd\TortoiseKid_side.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\BoomratKid_back.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\BoomratKid_front.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\BoomratKid_side.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\CobraKid_back.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\CobraKid_front.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\CobraKid_side.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Eggs.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Furx_back.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Furx_front.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Furx_side.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\IguanaKid_back.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\IguanaKid_front.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\IguanaKid_side.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\MegascarabKid_back.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\MegascarabKid_front.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\MegascarabKid_side.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Megaslug_back.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Megaslug_front.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Megaslug_side.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\MonkeyKid_back.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\MonkeyKid_front.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\MonkeyKid_side.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\MuffaloKid_back.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\MuffaloKid_front.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\MuffaloKid_side.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Quadhog_back.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Quadhog_front.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Quadhog_side.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Rimdile_back.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Rimdile_front.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Rimdile_side.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Rimdog_back.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Rimdog_front.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Rimdog_side.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Rimram_back.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Rimram_front.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Rimram_side.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Rimwolf_back.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Rimwolf_front.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Rimwolf_side.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Snork_back.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Snork_front.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Snork_side.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Spindlecrib_back.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Spindlecrib_front.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\Spindlecrib_side.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\SquirrelKid_back.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\SquirrelKid_front.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\SquirrelKid_side.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\TortoiseKid_back.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\TortoiseKid_front.png" />
+    <Content Include="MOD\Textures\Things\Pawn\Animals\TortoiseKid_side.png" />
+    <Content Include="obj\Debug\RimWorld_AnimalHusbandry.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\RimWorld_AnimalHusbandry.dll" />
+    <Content Include="obj\Debug\RimWorld_AnimalHusbandry.pdb" />
+    <Content Include="obj\Release\RimWorld_AnimalHusbandry.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\RimWorld_AnimalHusbandry.dll" />
+    <Content Include="obj\Release\RimWorld_AnimalHusbandry.pdb" />
+    <Content Include="old_dlls\Assembly-CSharp_v8.dll" />
+    <Content Include="old_dlls\Assembly-CSharp_v8.sln" />
+    <Content Include="Source-DLLs\Assembly-CSharp.dll" />
+    <Content Include="Source-DLLs\Assembly-CSharp.dll.txt" />
+    <Content Include="Source-DLLs\UnityEngine.dll" />
+    <Content Include="Source-DLLs\UnityEngine.dll.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\RimWorld_AnimalHusbandry.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Release\RimWorld_AnimalHusbandry.csprojResolveAssemblyReference.cache" />
+    <None Include="old_dlls\Assembly-CSharp_v8.userprefs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MOD\Assemblies\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\TempPE\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,5 @@
+I:\Dev\Projects\AnimalHusbandry\RimWorld_AnimalHusbandry\bin\Release\RimWorld_AnimalHusbandry.dll
+I:\Dev\Projects\AnimalHusbandry\RimWorld_AnimalHusbandry\bin\Release\RimWorld_AnimalHusbandry.pdb
+I:\Dev\Projects\AnimalHusbandry\RimWorld_AnimalHusbandry\obj\Release\RimWorld_AnimalHusbandry.csprojResolveAssemblyReference.cache
+I:\Dev\Projects\AnimalHusbandry\RimWorld_AnimalHusbandry\obj\Release\RimWorld_AnimalHusbandry.dll
+I:\Dev\Projects\AnimalHusbandry\RimWorld_AnimalHusbandry\obj\Release\RimWorld_AnimalHusbandry.pdb

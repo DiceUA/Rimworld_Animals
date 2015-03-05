@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ThingDefs>
+
+   <ThingDef Name="BasePawn" Abstract="True">
+      <eType>Pawn</eType>
+      <thingClass>Pawn</thingClass>
+      <category>Pawn</category>
+      <selectable>true</selectable>
+      <tickerType>Normal</tickerType>
+      <altitudeLayer>Pawn</altitudeLayer>
+      <useStandardHealth>false</useStandardHealth>
+      <hasTooltip>true</hasTooltip>
+      <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+      <inspectorTabs>
+         <li>ITab_Pawn_Thoughts</li>
+         <li>ITab_Pawn_Prisoner</li>
+         <li>ITab_Pawn_Gear</li>
+         <li>ITab_Pawn_Character</li>
+         <li>ITab_Pawn_Health</li>
+      </inspectorTabs>
+      <drawGUIOverlay>true</drawGUIOverlay>
+   </ThingDef>
+
+   <ThingDef ParentName="BasePawn" Name="BaseAnimal" Abstract="True">
+      <race>
+         <hasStory>false</hasStory>
+         <needsRest>false</needsRest>
+         <minFoodTaste>Plant</minFoodTaste>
+         <isFlesh>true</isFlesh>
+         <hasLeather>true</hasLeather>
+         <hasGenders>true</hasGenders>
+      </race>
+   </ThingDef>
+
+   <!-- ============================ Wild Animals ========================== -->
+
+   <ThingDef ParentName="BaseAnimal">
+      <defName>Deer</defName>
+      <thingClass>SRP_Fauna.Pawn_WildAnimal</thingClass>
+      <label>Wild Deer</label>
+      <description>A medium-sized herding herbivore. Generally peaceful unless disturbed.</description>
+      <graphicOverdraw>true</graphicOverdraw>
+      <sunShadowInfo>
+         <baseWidth>0.5</baseWidth>
+         <baseHeight>0.5</baseHeight>
+         <tallness>0.5</tallness>
+      </sunShadowInfo>
+      <targetHitChanceFactor>1.0</targetHitChanceFactor>
+      <statBases>
+         <MoveSpeed>4.84</MoveSpeed>
+         <Flammability>1.0</Flammability>
+      	 <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+      </statBases>
+      <verbs>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
+            <meleeDamageDef>Blunt</meleeDamageDef>
+            <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+         </li>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
+            <meleeDamageDef>Blunt</meleeDamageDef>
+            <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+         </li>
+      </verbs>
+      <race>
+         <thinkTree>HerbivoreHerd</thinkTree>
+         <hungerRate>0.7</hungerRate>
+         <body>QuadrupedAnimalWithHooves</body>
+         <bodySize>0.9</bodySize>
+         <healthScale>0.9</healthScale>
+         <diet>Herbivorous</diet>
+         <leatherColor>(162,106,57)</leatherColor>
+         <leatherLabel>deerhide</leatherLabel>
+      	 <leatherInsulation>1.25</leatherInsulation>
+         <meatLabel>venison</meatLabel>
+         <soundCallIntervalRange>
+            <min>3500</min>
+            <max>6000</max>
+         </soundCallIntervalRange>
+         <soundWounded>Pawn_Antelope_Wounded</soundWounded>
+         <soundDeath>Pawn_Antelope_Death</soundDeath>
+         <soundCall>Pawn_Antelope_Call</soundCall>
+         <soundAngry>Pawn_Antelope_Angry</soundAngry>
+         <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+         <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+         <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      </race>
+   </ThingDef>
+
+   <!-- ============================ Domesticated Animals Race ========================== -->
+
+   <ThingDef ParentName="BaseAnimal" Name="D_Deer">
+      <defName>D_Deer</defName>
+      <thingClass>SRP_Fauna.FarmAnimal</thingClass>
+      <label>Domesticated Deer</label>
+      <description>A domesticated Deer.</description>
+      <graphicOverdraw>true</graphicOverdraw>
+      <sunShadowInfo>
+         <baseWidth>0.5</baseWidth>
+         <baseHeight>0.5</baseHeight>
+         <tallness>0.5</tallness>
+      </sunShadowInfo>
+      <targetHitChanceFactor>1.0</targetHitChanceFactor>
+      <statBases>
+         <MoveSpeed>4.84</MoveSpeed>
+         <Flammability>1.0</Flammability>
+      	 <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+      </statBases>
+      <verbs>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
+            <meleeDamageDef>Blunt</meleeDamageDef>
+            <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+         </li>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
+            <meleeDamageDef>Blunt</meleeDamageDef>
+            <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+         </li>
+      </verbs>
+      <race>
+         <thinkTree>FarmAnimal</thinkTree>
+         <hungerRate>0.7</hungerRate>
+         <body>QuadrupedAnimalWithHooves</body>
+         <bodySize>0.9</bodySize>
+         <healthScale>0.9</healthScale>
+         <diet>Herbivorous</diet>
+         <leatherColor>(162,106,57)</leatherColor>
+         <leatherLabel>deerhide</leatherLabel>
+      	 <leatherInsulation>1.25</leatherInsulation>
+         <meatLabel>venison</meatLabel>
+         <soundCallIntervalRange>
+            <min>3500</min>
+            <max>6000</max>
+         </soundCallIntervalRange>
+         <soundWounded>Pawn_Antelope_Wounded</soundWounded>
+         <soundDeath>Pawn_Antelope_Death</soundDeath>
+         <soundCall>Pawn_Antelope_Call</soundCall>
+         <soundAngry>Pawn_Antelope_Angry</soundAngry>
+         <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+         <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+         <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      </race>
+   </ThingDef>
+
+   <ThingDef ParentName="D_Deer" Name="DeerBaby">
+      <defName>DeerKid</defName>
+      <thingClass>SRP_Fauna.KidAnimal</thingClass>
+      <label>Deer Kid</label>
+      <graphicOverdraw>false</graphicOverdraw>
+      <targetHitChanceFactor>1.0</targetHitChanceFactor>
+      <statBases>
+         <MoveSpeed>1.84</MoveSpeed>
+         <Flammability>1.0</Flammability>
+      	 <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+      </statBases>
+      <verbs>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>3</meleeDamageBaseAmount>
+            <meleeDamageDef>Blunt</meleeDamageDef>
+            <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+         </li>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>3</meleeDamageBaseAmount>
+            <meleeDamageDef>Blunt</meleeDamageDef>
+            <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+         </li>
+      </verbs>
+      <race>
+         <hasLeather>false</hasLeather>
+         <healthScale>0.6</healthScale>
+         <hungerRate>0.3</hungerRate>
+         <bodySize>0.3</bodySize>
+      </race>
+   </ThingDef>
+
+</ThingDefs>

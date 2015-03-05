@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<WorkGivers>
+
+   <!--============= Animal Husbandry ===========-->
+
+   <WorkGiverDef>
+      <defName>CaptureAnimal</defName>
+      <giverClass>SRP_Fauna.WorkGiver_CaptureAnimal</giverClass>
+      <workType>Warden</workType>
+      <verb>capture</verb>
+      <gerund>capturing</gerund>
+   </WorkGiverDef>
+
+</WorkGivers>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ThoughtDefs>
+
+   <!-- Animal Husbandry Thoughts -->
+
+   <ThoughtDef>
+      <defName>SawWildAnimal</defName>
+      <duration>10000</duration>
+      <stackedEffectMultiplier>0.8</stackedEffectMultiplier>
+      <stackLimit>5</stackLimit>
+      <stages>
+         <li>
+            <label>Saw Wild Animal</label>
+            <description>I saw a wild animal. Docile when untouched, dangerous when harmed.</description>
+            <baseMoodEffect>3</baseMoodEffect>
+         </li>
+      </stages>
+   </ThoughtDef>
+
+</ThoughtDefs>

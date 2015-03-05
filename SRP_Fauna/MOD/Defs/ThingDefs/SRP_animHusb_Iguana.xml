@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ThingDefs>
+
+   <ThingDef Name="BasePawn" Abstract="True">
+      <eType>Pawn</eType>
+      <thingClass>Pawn</thingClass>
+      <category>Pawn</category>
+      <selectable>true</selectable>
+      <tickerType>Normal</tickerType>
+      <altitudeLayer>Pawn</altitudeLayer>
+      <useStandardHealth>false</useStandardHealth>
+      <hasTooltip>true</hasTooltip>
+      <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+      <inspectorTabs>
+         <li>ITab_Pawn_Thoughts</li>
+         <li>ITab_Pawn_Prisoner</li>
+         <li>ITab_Pawn_Gear</li>
+         <li>ITab_Pawn_Character</li>
+         <li>ITab_Pawn_Health</li>
+      </inspectorTabs>
+      <drawGUIOverlay>true</drawGUIOverlay>
+   </ThingDef>
+
+   <ThingDef ParentName="BasePawn" Name="BaseAnimal" Abstract="True">
+      <race>
+         <hasStory>false</hasStory>
+         <needsRest>false</needsRest>
+         <minFoodTaste>Plant</minFoodTaste>
+         <isFlesh>true</isFlesh>
+         <hasLeather>true</hasLeather>
+         <hasGenders>true</hasGenders>
+      </race>
+   </ThingDef>
+
+   <!-- ============================ Wild Animals ========================== -->
+
+   <ThingDef ParentName="BaseAnimal">
+      <defName>Iguana</defName>
+      <thingClass>SRP_Fauna.Pawn_WildAnimal</thingClass>
+      <label>Wild Iguana</label>
+      <description>These large lizards normally feed on plant matter. However, when angered, their tough hide and sharp claws make them quite dangerous.</description>
+      <graphicOverdraw>false</graphicOverdraw>
+      <targetHitChanceFactor>0.6</targetHitChanceFactor>
+      <statBases>
+         <MoveSpeed>3.23</MoveSpeed>
+         <Flammability>1.0</Flammability>
+      	 <ComfyTemperatureMin>0</ComfyTemperatureMin>
+      </statBases>
+      <verbs>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+            <meleeDamageDef>Scratch</meleeDamageDef>
+            <linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+         </li>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+            <meleeDamageDef>Scratch</meleeDamageDef>
+            <linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+         </li>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>6</meleeDamageBaseAmount>
+            <meleeDamageDef>Bite</meleeDamageDef>
+            <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+         </li>
+      </verbs>
+      <race>
+         <thinkTree>HerbivoreStandard</thinkTree>
+         <hungerRate>0.3</hungerRate>
+         <body>QuadrupedAnimalWithClawsTailAndJowl</body>
+         <bodySize>0.2</bodySize>
+         <healthScale>0.78</healthScale>
+         <diet>Omnivorous</diet>
+         <leatherColor>(101,116,58)</leatherColor>
+         <leatherLabel>iguana skin</leatherLabel>
+      	 <leatherInsulation>0.75</leatherInsulation>
+         <soundWounded>Pawn_Lizard_Wounded</soundWounded>
+         <soundDeath>Pawn_Lizard_Death</soundDeath>
+         <soundCall>Pawn_Lizard_Call</soundCall>
+         <soundAngry>Pawn_Lizard_Angry</soundAngry>
+         <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+         <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+         <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      </race>
+   </ThingDef>
+
+   <!-- ============================ Domesticated Animals Race ========================== -->
+
+   <ThingDef ParentName="BaseAnimal" Name="D_Iguana">
+      <defName>D_Iguana</defName>
+      <thingClass>SRP_Fauna.FarmAnimal</thingClass>
+      <label>Domesticated Iguana</label>
+      <description>A domesticated Iguana</description>
+      <graphicOverdraw>false</graphicOverdraw>
+      <targetHitChanceFactor>0.6</targetHitChanceFactor>
+      <statBases>
+         <MoveSpeed>3.23</MoveSpeed>
+         <Flammability>1.0</Flammability>
+      	 <ComfyTemperatureMin>0</ComfyTemperatureMin>
+      </statBases>
+      <verbs>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+            <meleeDamageDef>Scratch</meleeDamageDef>
+            <linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+         </li>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+            <meleeDamageDef>Scratch</meleeDamageDef>
+            <linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+         </li>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>6</meleeDamageBaseAmount>
+            <meleeDamageDef>Bite</meleeDamageDef>
+            <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+         </li>
+      </verbs>
+      <race>
+         <thinkTree>FarmAnimal</thinkTree>
+         <hungerRate>0.3</hungerRate>
+         <body>QuadrupedAnimalWithClawsTailAndJowl</body>
+         <bodySize>0.2</bodySize>
+         <healthScale>0.78</healthScale>
+         <diet>Omnivorous</diet>
+         <leatherColor>(101,116,58)</leatherColor>
+         <leatherLabel>iguana skin</leatherLabel>
+      	 <leatherInsulation>0.75</leatherInsulation>
+         <soundWounded>Pawn_Lizard_Wounded</soundWounded>
+         <soundDeath>Pawn_Lizard_Death</soundDeath>
+         <soundCall>Pawn_Lizard_Call</soundCall>
+         <soundAngry>Pawn_Lizard_Angry</soundAngry>
+         <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+         <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+         <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      </race>
+   </ThingDef>
+
+   <ThingDef ParentName="D_Iguana" Name="IguanaBaby">
+      <defName>IguanaKid</defName>
+      <thingClass>SRP_Fauna.KidAnimal</thingClass>
+      <label>Iguana Kid</label>
+      <graphicOverdraw>false</graphicOverdraw>
+      <targetHitChanceFactor>1.0</targetHitChanceFactor>
+      <statBases>
+         <MoveSpeed>1.23</MoveSpeed>
+         <Flammability>1.0</Flammability>
+      	 <ComfyTemperatureMin>0</ComfyTemperatureMin>
+      </statBases>
+      <verbs>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>2</meleeDamageBaseAmount>
+            <meleeDamageDef>Bite</meleeDamageDef>
+            <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+         </li>
+      </verbs>
+      <race>
+         <hasLeather>false</hasLeather>
+         <healthScale>0.2</healthScale>
+         <hungerRate>0.1</hungerRate>
+         <bodySize>0.01</bodySize>
+      </race>
+   </ThingDef>
+
+</ThingDefs>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Buildings>
+
+   <ThingDef Name="BuildingBase" Abstract="True">
+      <category>Building</category>
+      <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+      <selectable>true</selectable>
+      <drawerType>MapMeshAndRealTime</drawerType>
+      <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+      <constructEffect>ConstructWood</constructEffect>
+      <repairEffect>Repair</repairEffect>
+   </ThingDef>
+
+   <!-- Tech Tree Minami -->
+
+   <ThingDef ParentName="BuildingBase">
+      <defName>PastureMarker</defName>
+      <eType>BuildingComplex</eType>
+      <label>Pasture Marker</label>
+      <thingClass>SRP_Fauna.Building_PastureMarker</thingClass>
+      <graphicPath>PastureMarker</graphicPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <altitudeLayer>Waist</altitudeLayer>
+      <passability>Impassable</passability>
+      <statBases>
+         <WorkToMake>800</WorkToMake>
+         <MaxHealth>110</MaxHealth>
+         <Flammability>1.0</Flammability>
+      </statBases>
+      <tickerType>Normal</tickerType>
+      <costList>
+         <WoodLog>40</WoodLog>
+      </costList>
+      <description>Marks a place as a pasture area.
+		Domesticated animals try not to wander off too much from this building.
+		
+		*Has the ability to call domesticated animals to this building.
+		
+		*You can set what animal pastures in this area by clicking the on the Switch Animal button.</description>
+      <rotatable>false</rotatable>
+      <size>(2,2)</size>
+      <graphicOverdraw>false</graphicOverdraw>
+      <fillPercent>0</fillPercent>
+      <hasInteractionCell>false</hasInteractionCell>
+      <designationCategory>Misc</designationCategory>
+      <researchPrerequisite>AnimalHusbandry</researchPrerequisite>
+      <itemSurface>true</itemSurface>
+   </ThingDef>
+
+</Buildings>

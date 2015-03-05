@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ThingDefs>
+
+   <ThingDef Name="BasePawn" Abstract="True">
+      <eType>Pawn</eType>
+      <thingClass>Pawn</thingClass>
+      <category>Pawn</category>
+      <selectable>true</selectable>
+      <tickerType>Normal</tickerType>
+      <altitudeLayer>Pawn</altitudeLayer>
+      <useStandardHealth>false</useStandardHealth>
+      <hasTooltip>true</hasTooltip>
+      <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+      <inspectorTabs>
+         <li>ITab_Pawn_Thoughts</li>
+         <li>ITab_Pawn_Prisoner</li>
+         <li>ITab_Pawn_Gear</li>
+         <li>ITab_Pawn_Character</li>
+         <li>ITab_Pawn_Health</li>
+      </inspectorTabs>
+      <drawGUIOverlay>true</drawGUIOverlay>
+   </ThingDef>
+   <ThingDef ParentName="BasePawn" Name="BaseAnimal" Abstract="True">
+      <race>
+         <hasStory>false</hasStory>
+         <needsRest>false</needsRest>
+         <minFoodTaste>Plant</minFoodTaste>
+         <isFlesh>true</isFlesh>
+         <hasLeather>true</hasLeather>
+         <hasGenders>true</hasGenders>
+      </race>
+   </ThingDef>
+
+   <!-- ============================ Wild Animals ========================== -->
+
+   <ThingDef ParentName="BaseAnimal">
+      <defName>Cobra</defName>
+      <thingClass>SRP_Fauna.Pawn_WildAnimal</thingClass>
+      <label>Wild Cobra</label>
+      <description>A large snake. Cobras can be highly aggressive if provoked - it's better to stay away from these creatures.</description>
+      <graphicOverdraw>false</graphicOverdraw>
+      <targetHitChanceFactor>0.4</targetHitChanceFactor>
+      <statBases>
+         <MoveSpeed>4.84</MoveSpeed>
+         <Flammability>1.0</Flammability>
+         <ComfyTemperatureMin>-5</ComfyTemperatureMin>
+      </statBases>
+      <verbs>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>9</meleeDamageBaseAmount>
+            <meleeDamageDef>Bite</meleeDamageDef>
+            <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+         </li>
+      </verbs>
+      <race>
+         <thinkTree>HerbivoreStandard</thinkTree>
+         <hungerRate>0.3</hungerRate>
+         <body>Snake</body>
+         <bodySize>0.2</bodySize>
+         <healthScale>0.78</healthScale>
+         <diet>Omnivorous</diet>
+         <leatherColor>(113,98,87)</leatherColor>
+         <leatherLabel>cobraskin</leatherLabel>
+         <leatherInsulation>0.75</leatherInsulation>
+         <meatLabel>cobraflesh</meatLabel>
+         <soundWounded>Pawn_Snake_Wounded</soundWounded>
+         <soundDeath>Pawn_Snake_Death</soundDeath>
+         <soundCall>Pawn_Snake_Call</soundCall>
+         <soundAngry>Pawn_Snake_Angry</soundAngry>
+         <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+         <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+         <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      </race>
+   </ThingDef>
+
+   <!-- ============================ Domesticated Animals Race ========================== -->
+
+   <ThingDef ParentName="BaseAnimal" Name="D_Cobra">
+      <defName>D_Cobra</defName>
+      <thingClass>SRP_Fauna.FarmAnimal</thingClass>
+      <label>Domesticated Cobra</label>
+      <description>A domesticated cobra.</description>
+      <graphicOverdraw>false</graphicOverdraw>
+      <targetHitChanceFactor>0.4</targetHitChanceFactor>
+      <statBases>
+         <MoveSpeed>4.84</MoveSpeed>
+         <Flammability>1.0</Flammability>
+         <ComfyTemperatureMin>-5</ComfyTemperatureMin>
+      </statBases>
+      <verbs>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>9</meleeDamageBaseAmount>
+            <meleeDamageDef>Bite</meleeDamageDef>
+            <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+         </li>
+      </verbs>
+      <race>
+         <thinkTree>FarmAnimal</thinkTree>
+         <hungerRate>0.3</hungerRate>
+         <body>Snake</body>
+         <bodySize>0.2</bodySize>
+         <healthScale>0.78</healthScale>
+         <diet>Omnivorous</diet>
+         <leatherColor>(113,98,87)</leatherColor>
+         <leatherLabel>cobraskin</leatherLabel>
+         <leatherInsulation>0.75</leatherInsulation>
+         <meatLabel>cobraflesh</meatLabel>
+         <soundWounded>Pawn_Snake_Wounded</soundWounded>
+         <soundDeath>Pawn_Snake_Death</soundDeath>
+         <soundCall>Pawn_Snake_Call</soundCall>
+         <soundAngry>Pawn_Snake_Angry</soundAngry>
+         <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+         <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+         <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+      </race>
+   </ThingDef>
+
+   <ThingDef ParentName="D_Cobra" Name="CobraBaby">
+      <defName>CobraKid</defName>
+      <thingClass>SRP_Fauna.KidAnimal</thingClass>
+      <label>Cobra Kid</label>
+      <graphicOverdraw>false</graphicOverdraw>
+      <targetHitChanceFactor>1.0</targetHitChanceFactor>
+      <statBases>
+         <MoveSpeed>1.0</MoveSpeed>
+         <Flammability>1.0</Flammability>
+      </statBases>
+      <verbs>
+         <li>
+            <verbClass>Verb_MeleeAttack</verbClass>
+            <defaultCooldownTicks>100</defaultCooldownTicks>
+            <meleeDamageBaseAmount>1</meleeDamageBaseAmount>
+            <meleeDamageDef>Bite</meleeDamageDef>
+            <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+         </li>
+      </verbs>
+      <race>
+         <hasLeather>false</hasLeather>
+         <healthScale>0.02</healthScale>
+         <hungerRate>0.1</hungerRate>
+         <bodySize>0.01</bodySize>
+      </race>
+   </ThingDef>
+
+</ThingDefs>

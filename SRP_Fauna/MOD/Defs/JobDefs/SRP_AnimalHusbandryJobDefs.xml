@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<JobDefs>
+
+   <JobDef>
+      <defName>giveBirth</defName>
+      <driverClass>SRP_Fauna.JobDriver_giveBirth</driverClass>
+      <reportString>Giving birth.</reportString>
+   </JobDef>
+
+   <JobDef>
+      <defName>Mate</defName>
+      <driverClass>SRP_Fauna.JobDriver_Mate</driverClass>
+      <reportString>Copulating with TargetA.</reportString>
+   </JobDef>
+
+   <JobDef>
+      <defName>FollowMaster</defName>
+      <driverClass>SRP_Fauna.JobDriver_FollowMaster</driverClass>
+      <reportString>Following TargetA.</reportString>
+   </JobDef>
+
+   <JobDef>
+      <defName>CaptureAnimal</defName>
+      <driverClass>SRP_Fauna.JobDriver_CaptureAnimal</driverClass>
+      <reportString>Capturing TargetA.</reportString>
+   </JobDef>
+
+</JobDefs>

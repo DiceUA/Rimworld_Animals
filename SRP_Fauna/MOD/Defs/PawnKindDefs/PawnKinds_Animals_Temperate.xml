@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Defs>
+
+   <PawnKindDef>
+      <defName>Deer</defName>
+      <label>Deer</label>
+      <race>Deer</race>
+      <pointsCost>75</pointsCost>
+      <standardBodyGraphicPath>Things/Pawn/Animal/Deer</standardBodyGraphicPath>
+      <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedMedium</dessicatedBodygraphicPath>
+      <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+      <wildSpawn_EcoSystemWeight>0.7</wildSpawn_EcoSystemWeight>
+      <wildSpawn_GroupSizeRange>
+         <min>3</min>
+         <max>9</max>
+      </wildSpawn_GroupSizeRange>
+   </PawnKindDef>
+
+   <PawnKindDef>
+      <defName>D_Deer</defName>
+      <label>Domesticated Deer</label>
+      <race>D_Deer</race>
+      <pointsCost>10</pointsCost>
+      <standardBodyGraphicPath>Things/Pawn/Animal/Deer</standardBodyGraphicPath>
+      <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
+      <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+   </PawnKindDef>
+
+   <PawnKindDef>
+      <defName>DeerKid</defName>
+      <label>DeerKid</label>
+      <race>DeerKid</race>
+      <pointsCost>1</pointsCost>
+      <standardBodyGraphicPath>Things/Pawn/Animal/Deer</standardBodyGraphicPath>
+      <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
+      <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+   </PawnKindDef>
+
+   <!-- ========== Deers ==========  -->
+
+   <PawnKindDef>
+      <defName>Tortoise</defName>
+      <label>tortoise</label>
+      <race>Tortoise</race>
+      <pointsCost>50</pointsCost>
+      <standardBodyGraphicPath>Things/Pawn/Animal/Tortoise</standardBodyGraphicPath>
+      <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
+      <wildSpawn_EcoSystemWeight>0.4</wildSpawn_EcoSystemWeight>
+      <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+   </PawnKindDef>
+
+   <PawnKindDef>
+      <defName>D_Tortoise</defName>
+      <label>Domesticated Tortoise</label>
+      <race>D_Tortoise</race>
+      <pointsCost>10</pointsCost>
+      <standardBodyGraphicPath>Things/Pawn/Animal/Tortoise</standardBodyGraphicPath>
+      <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
+      <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+   </PawnKindDef>
+
+   <PawnKindDef>
+      <defName>TortoiseKid</defName>
+      <label>TortoiseKid</label>
+      <race>TortoiseKid</race>
+      <pointsCost>1</pointsCost>
+      <standardBodyGraphicPath>Things/Pawn/Animals/TortoiseKid</standardBodyGraphicPath>
+      <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
+      <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+   </PawnKindDef>
+
+   <!-- ========== Tortoises ==========  -->
+
+  <PawnKindDef>
+     <defName>Furx</defName>
+     <label>Furx</label>
+     <race>Furx</race>
+     <pointsCost>50</pointsCost>
+     <standardBodygraphicPath>Things/Pawn/Animals/Furx</standardBodygraphicPath>
+     <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedMedium</dessicatedBodygraphicPath>
+     <wildSpawn_EcoSystemWeight>0.35</wildSpawn_EcoSystemWeight>
+     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>D_Furx</defName>
+    <label>Domesticated Furx</label>
+    <race>D_Furx</race>
+    <pointsCost>10</pointsCost>
+    <standardBodyGraphicPath>Things/Pawn/Animals/Furx</standardBodyGraphicPath>
+    <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
+    <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>FurxKid</defName>
+    <label>FurxKid</label>
+    <race>FurxKid</race>
+    <pointsCost>1</pointsCost>
+    <standardBodyGraphicPath>Things/Pawn/Animals/Furx</standardBodyGraphicPath>
+    <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
+    <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+  </PawnKindDef>
+
+  <!-- ========== Furx ==========  -->
+
+  <PawnKindDef>
+     <defName>Quadhog</defName>
+     <label>Quadhog</label>
+     <race>Quadhog</race>
+     <pointsCost>100</pointsCost>
+     <standardBodygraphicPath>Things/Pawn/Animals/Quadhog</standardBodygraphicPath>
+     <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedMedium</dessicatedBodygraphicPath>
+     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+     <wildSpawn_EcoSystemWeight>0.05</wildSpawn_EcoSystemWeight>
+     <wildSpawn_GroupSizeRange>
+       <min>1</min>
+       <max>3</max>
+     </wildSpawn_GroupSizeRange>
+  </PawnKindDef>
+  
+
+  <!-- ========== Quadhog ==========  -->
+
+  <PawnKindDef>
+     <defName>Rimdog</defName>
+     <label>Rimdog</label>
+     <race>Rimdog</race>
+     <pointsCost>50</pointsCost>
+     <standardBodygraphicPath>Things/Pawn/Animals/Rimdog</standardBodygraphicPath>
+     <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedMedium</dessicatedBodygraphicPath>
+     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+     <wildSpawn_EcoSystemWeight>0.35</wildSpawn_EcoSystemWeight>
+     <wildSpawn_GroupSizeRange>
+       <min>3</min>
+       <max>9</max>
+     </wildSpawn_GroupSizeRange>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>D_Rimdog</defName>
+    <label>Domesticated Rimdog</label>
+    <race>D_Rimdog</race>
+    <pointsCost>10</pointsCost>
+    <standardBodyGraphicPath>Things/Pawn/Animals/Rimdog</standardBodyGraphicPath>
+    <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
+    <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>RimdogKid</defName>
+    <label>RimdogKid</label>
+    <race>RimdogKid</race>
+    <pointsCost>1</pointsCost>
+    <standardBodyGraphicPath>Things/Pawn/Animals/Rimdog</standardBodyGraphicPath>
+    <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
+    <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+  </PawnKindDef>
+  
+  <!-- ========== Rimdog ==========  -->
+
+  <PawnKindDef>
+     <defName>Rimram</defName>
+     <label>Rim Ram</label>
+     <race>Rimram</race>
+     <pointsCost>20</pointsCost>
+     <standardBodygraphicPath>Things/Pawn/Animals/Rimram</standardBodygraphicPath>
+     <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedMedium</dessicatedBodygraphicPath>
+     <wildSpawn_EcoSystemWeight>0.5</wildSpawn_EcoSystemWeight>
+     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+     <wildSpawn_GroupSizeRange>
+       <min>1</min>
+       <max>3</max>
+     </wildSpawn_GroupSizeRange>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>D_Rimram</defName>
+    <label>Domesticated Rimram</label>
+    <race>D_Rimram</race>
+    <pointsCost>10</pointsCost>
+    <standardBodyGraphicPath>Things/Pawn/Animals/Rimram</standardBodyGraphicPath>
+    <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
+    <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>RimramKid</defName>
+    <label>RimramKid</label>
+    <race>RimramKid</race>
+    <pointsCost>1</pointsCost>
+    <standardBodyGraphicPath>Things/Pawn/Animals/Rimram</standardBodyGraphicPath>
+    <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
+    <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+  </PawnKindDef>
+
+  <!-- ========== Rimram ==========  -->
+
+  <PawnKindDef>
+     <defName>Rimwolf</defName>
+     <label>Rimwolf</label>
+     <race>Rimwolf</race>
+     <pointsCost>70</pointsCost>
+     <standardBodygraphicPath>Things/Pawn/Animals/Rimwolf</standardBodygraphicPath>
+     <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedMedium</dessicatedBodygraphicPath>
+     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+     <wildSpawn_EcoSystemWeight>0.20</wildSpawn_EcoSystemWeight>
+     <wildSpawn_GroupSizeRange>
+       <min>3</min>
+       <max>9</max>
+     </wildSpawn_GroupSizeRange>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>D_Rimwolf</defName>
+    <label>Domesticated Rimwolf</label>
+    <race>D_Rimwolf</race>
+    <pointsCost>10</pointsCost>
+    <standardBodyGraphicPath>Things/Pawn/Animals/Rimwolf</standardBodyGraphicPath>
+    <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
+    <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>RimwolfKid</defName>
+    <label>RimwolfKid</label>
+    <race>RimwolfKid</race>
+    <pointsCost>1</pointsCost>
+    <standardBodyGraphicPath>Things/Pawn/Animals/Rimwolf</standardBodyGraphicPath>
+    <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
+    <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+  </PawnKindDef>
+
+  <!-- ========== Rimwolf ==========  -->
+
+  <PawnKindDef>
+     <defName>Snork</defName>
+     <label>Snork</label>
+     <race>Snork</race>
+     <pointsCost>30</pointsCost>
+     <standardBodygraphicPath>Things/Pawn/Animals/Snork</standardBodygraphicPath>
+     <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedMedium</dessicatedBodygraphicPath>
+     <wildSpawn_EcoSystemWeight>0.4</wildSpawn_EcoSystemWeight>
+     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+     <wildSpawn_GroupSizeRange>
+       <min>1</min>
+       <max>4</max>
+     </wildSpawn_GroupSizeRange>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>D_Snork</defName>
+    <label>Domesticated Snork</label>
+    <race>D_Snork</race>
+    <pointsCost>10</pointsCost>
+    <standardBodyGraphicPath>Things/Pawn/Animals/Snork</standardBodyGraphicPath>
+    <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
+    <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>SnorkKid</defName>
+    <label>SnorkKid</label>
+    <race>SnorkKid</race>
+    <pointsCost>1</pointsCost>
+    <standardBodyGraphicPath>Things/Pawn/Animals/Snork</standardBodyGraphicPath>
+    <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedSmall</dessicatedBodygraphicPath>
+    <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+  </PawnKindDef>
+
+  <!-- ========== Snork ==========  -->
+
+</Defs>
