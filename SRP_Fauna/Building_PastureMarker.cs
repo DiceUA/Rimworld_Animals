@@ -37,11 +37,35 @@ namespace SRP_Fauna
 		{
 			if (this.choice == 0) {
 				List<Pawn> list = (from p in Find.ListerPawns.AllPawns
-				where p.def.defName == "BoomratDomestic" || p.def.defName == "CobraDomestic" || p.def.defName == "DeerDomestic" || p.def.defName == "DromedaryDomestic" || p.def.defName == "IguanaDomestic" || p.def.defName == "MegascarabDomestic" || p.def.defName == "MonkeyDomestic" || p.def.defName == "MuffaloDomestic" || p.def.defName == "RhinocerosDomestic" || p.def.defName == "SquirrelDomestic" || p.def.defName == "TortoiseDomestic" || p.def.defName == "BoarDomestic"
+				where p.def.defName == "BoomratDomestic" || 
+                p.def.defName == "CobraDomestic" || 
+                p.def.defName == "DeerDomestic" || 
+                p.def.defName == "DromedaryDomestic" || 
+                p.def.defName == "IguanaDomestic" || 
+                p.def.defName == "MegascarabDomestic" || 
+                p.def.defName == "MonkeyDomestic" || 
+                p.def.defName == "MuffaloDomestic" || 
+                p.def.defName == "RhinocerosDomestic" || 
+                p.def.defName == "SquirrelDomestic" || 
+                p.def.defName == "TortoiseDomestic" || 
+                p.def.defName == "BoarDomestic"
 				select p).ToList<Pawn> ();
+
 				List<Pawn> list2 = (from p in Find.ListerPawns.AllPawns
-				where p.def.defName == "BoomratKid" || p.def.defName == "CobraKid" || p.def.defName == "DeerKid" || p.def.defName == "DromedaryKid" || p.def.defName == "IguanaKid" || p.def.defName == "MegascarabKid" || p.def.defName == "MonkeyKid" || p.def.defName == "MuffaloKid" || p.def.defName == "RhinocerosKid" || p.def.defName == "SquirrelKid" || p.def.defName == "TortoiseKid" || p.def.defName == "BoarKid"
+				where p.def.defName == "BoomratKid" || 
+                p.def.defName == "CobraKid" || 
+                p.def.defName == "DeerKid" || 
+                p.def.defName == "DromedaryKid" || 
+                p.def.defName == "IguanaKid" || 
+                p.def.defName == "MegascarabKid" || 
+                p.def.defName == "MonkeyKid" || 
+                p.def.defName == "MuffaloKid" || 
+                p.def.defName == "RhinocerosKid" || 
+                p.def.defName == "SquirrelKid" || 
+                p.def.defName == "TortoiseKid" || 
+                p.def.defName == "BoarKid"
 				select p).ToList<Pawn> ();
+
 				foreach (Pawn current in GenCollection.InRandomOrder<Pawn> (list)) {
 					if (!this.isKilled (current)) {
 						current.jobs.StopAll (false);
@@ -62,9 +86,11 @@ namespace SRP_Fauna
 			List<Pawn> list3 = (from p in Find.ListerPawns.AllPawns
 			where p.def.defName == (this.animalParent ?? "")
 			select p).ToList<Pawn> ();
+
 			List<Pawn> list4 = (from p in Find.ListerPawns.AllPawns
 			where p.def.defName == (this.animalKid ?? "")
 			select p).ToList<Pawn> ();
+
 			foreach (Pawn current3 in GenCollection.InRandomOrder<Pawn> (list3)) {
 				if (!this.isKilled (current3)) {
 					current3.jobs.StopAll (false);

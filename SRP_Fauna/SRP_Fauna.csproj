@@ -48,7 +48,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DomesticAnimals.cs" />
     <Compile Include="Building_PastureMarker.cs" />
+    <Compile Include="DomesticEggLayers.cs" />
     <Compile Include="JobDriver_FollowMaster.cs" />
     <Compile Include="Eggs.cs" />
     <Compile Include="FarmAnimal.cs" />
