@@ -18,6 +18,7 @@ namespace SRP_Fauna
         //
         // Methods
         //
+
         public override void ExposeData()
         {
             base.ExposeData();
@@ -31,92 +32,129 @@ namespace SRP_Fauna
             this.eggParent = parents;
             return null;
         }
-
+       
         public override void Tick()
         {
             if (this.justSpawned)
-            {
-                if (this.eggParent == "D_Megascarab")
-                {
-                    this.hatchTime = 200000;
-                }
-                else
-                {
-                    if (this.eggParent == "D_Iguana")
-                    {
+            {   
+                /*/This fucking switch case can fuck your brain hard so I commented it and made IFs
+                switch ((DomesticEggLayers)Enum.Parse(typeof(DomesticEggLayers), this.eggParent, true) {
+                    case DomesticEggLayers.MegascarabDomestic:
+                        this.hatchTime = 200000;
+                        break;
+                    case DomesticEggLayers.IguanaDomestic:
                         this.hatchTime = 260000;
-                    }
-                    else
-                    {
-                        if (this.eggParent == "D_Cobra")
-                        {
-                            this.hatchTime = 240000;
-                        }
-                        else
-                        {
-                            if (this.eggParent == "D_Tortoise")
-                            {
-                                this.hatchTime = 220000;
-                            }
-                        }
-                    }
-                }
+                        break;
+                    case DomesticEggLayers.CobraDomestic:
+                        this.hatchTime = 240000;
+                        break;
+                    case DomesticEggLayers.TortoiseDomestic:
+                        this.hatchTime = 220000;
+                        break;
+                    case DomesticEggLayers.LacosdileDomestic:
+                        this.hatchTime = 280000;
+                        break;
+                    case DomesticEggLayers.MegaslugDomestic:
+                        this.hatchTime = 200000;
+                        break;    
+                } //*///End of switch
+
+                if (this.eggParent == DomesticEggLayers.MegascarabDomestic.ToString())
+                    this.hatchTime = 200000;
+                if (this.eggParent == DomesticEggLayers.IguanaDomestic.ToString())
+                    this.hatchTime = 260000;
+                if (this.eggParent == DomesticEggLayers.CobraDomestic.ToString())
+                    this.hatchTime = 240000;
+                if (this.eggParent == DomesticEggLayers.TortoiseDomestic.ToString())
+                    this.hatchTime = 220000;
+                if (this.eggParent == DomesticEggLayers.LacosdileDomestic.ToString())
+                    this.hatchTime = 280000;
+                if (this.eggParent == DomesticEggLayers.MegaslugDomestic.ToString())
+                    this.hatchTime = 200000;
+
                 this.justSpawned = false;
             }
             if (this.hatchTime > 0)
             {
                 this.hatchTime--;
             }
-            if (this.hatchTime == 0)
+            if (this.hatchTime <= 0)
             {
-                if (this.eggParent == "D_Megascarab")
+                Pawn pawn;
+                IntVec3 intVec;
+                int i;
+                if (this.eggParent == DomesticEggLayers.MegascarabDomestic.ToString())
                 {
-                    int i = UnityEngine.Random.Range(3, 12);
+                    i = UnityEngine.Random.Range(3, 12);
                     while (i > 0)
                     {
                         i--;
-                        Pawn pawn = PawnGenerator.GeneratePawn(PawnKindDef.Named("MegascarabKid"), null);
-                        IntVec3 intVec = GenAdj.RandomAdjacentCell8Way(base.Position);
+                        pawn = PawnGenerator.GeneratePawn(PawnKindDef.Named("MegascarabKid"), null);
+                        intVec = GenAdj.RandomAdjacentCell8Way(base.Position);
                         GenSpawn.Spawn(pawn, intVec);
                     }
                     this.Destroy(0);
                     return;
                 }
-                if (this.eggParent == "D_Iguana")
+                if (this.eggParent == DomesticEggLayers.IguanaDomestic.ToString())
                 {
-                    int j = UnityEngine.Random.Range(3, 9);
-                    while (j > 0)
+                    i = UnityEngine.Random.Range(3, 9);
+                    while (i > 0)
                     {
-                        j--;
-                        Pawn pawn2 = PawnGenerator.GeneratePawn(PawnKindDef.Named("IguanaKid"), null);
-                        IntVec3 intVec2 = GenAdj.RandomAdjacentCell8Way(base.Position);
-                        GenSpawn.Spawn(pawn2, intVec2);
+                        i--;
+                        pawn = PawnGenerator.GeneratePawn(PawnKindDef.Named("IguanaKid"), null);
+                        intVec = GenAdj.RandomAdjacentCell8Way(base.Position);
+                        GenSpawn.Spawn(pawn, intVec);
                     }
                     this.Destroy(0);
                     return;
                 }
-                if (this.eggParent == "D_Cobra")
+                if (this.eggParent == DomesticEggLayers.CobraDomestic.ToString())
                 {
-                    int k = UnityEngine.Random.Range(3, 9);
-                    while (k > 0)
+                    i = UnityEngine.Random.Range(3, 9);
+                    while (i > 0)
                     {
-                        k--;
-                        Pawn pawn3 = PawnGenerator.GeneratePawn(PawnKindDef.Named("CobraKid"), null);
-                        IntVec3 intVec3 = GenAdj.RandomAdjacentCell8Way(base.Position);
-                        GenSpawn.Spawn(pawn3, intVec3);
+                        i--;
+                        pawn = PawnGenerator.GeneratePawn(PawnKindDef.Named("CobraKid"), null);
+                        intVec = GenAdj.RandomAdjacentCell8Way(base.Position);
+                        GenSpawn.Spawn(pawn, intVec);
                     }
                     this.Destroy(0);
                     return;
                 }
-                if (this.eggParent == "D_Tortoise")
+                if (this.eggParent == DomesticEggLayers.TortoiseDomestic.ToString())
                 {
-                    int l = UnityEngine.Random.Range(3, 16);
-                    while (l > 0)
+                    i = UnityEngine.Random.Range(3, 16);
+                    while (i > 0)
                     {
-                        l--;
-                        Pawn pawn4 = PawnGenerator.GeneratePawn(PawnKindDef.Named("TortoiseKid"), null);
-                        IntVec3 intVec4 = GenAdj.RandomAdjacentCell8Way(base.Position);
-                        GenSpawn.Spawn(pawn4, intVec4);
+                        i--;
+                        pawn = PawnGenerator.GeneratePawn(PawnKindDef.Named("TortoiseKid"), null);
+                        intVec = GenAdj.RandomAdjacentCell8Way(base.Position);
+                        GenSpawn.Spawn(pawn, intVec);
+                    }
+                    this.Destroy(0);
+                }
+                if (this.eggParent == DomesticEggLayers.LacosdileDomestic.ToString())
+                {
+                    i = UnityEngine.Random.Range(1, 3);
+                    while (i > 0)
+                    {
+                        i--;
+                        pawn = PawnGenerator.GeneratePawn(PawnKindDef.Named("LacosdileKid"), null);
+                        intVec = GenAdj.RandomAdjacentCell8Way(base.Position);
+                        GenSpawn.Spawn(pawn, intVec);
+                    }
+                    this.Destroy(0);
+                }
+                if (this.eggParent == DomesticEggLayers.MegaslugDomestic.ToString())
+                {
+                    i = UnityEngine.Random.Range(3, 16);
+                    while (i > 0)
+                    {
+                        i--;
+                        pawn = PawnGenerator.GeneratePawn(PawnKindDef.Named("MegaslugKid"), null);
+                        intVec = GenAdj.RandomAdjacentCell8Way(base.Position);
+                        GenSpawn.Spawn(pawn, intVec);
                     }
                     this.Destroy(0);
                 }
