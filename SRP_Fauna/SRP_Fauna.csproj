@@ -48,6 +48,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnimalsWild.cs" />
     <Compile Include="DomesticAnimals.cs" />
     <Compile Include="Building_PastureMarker.cs" />
     <Compile Include="DomesticEggLayers.cs" />
@@ -92,14 +93,21 @@
     <Content Include="MOD\Defs\SkillNeed\SRP_AnimalHusbandry_SkillNeedsGeneral.xml" />
     <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Boomrat.xml" />
     <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Cobra.xml" />
+    <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Snork.xml" />
+    <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Rimwolf.xml" />
+    <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Rimram.xml" />
+    <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Rimdog.xml" />
+    <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Lacosdile.xml" />
     <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Deer.xml" />
     <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Dromedary.xml" />
     <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Iguana.xml" />
     <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Megascarab.xml" />
     <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Monkey.xml" />
+    <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Furx.xml" />
     <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Muffalo.xml" />
     <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Rhinoceros.xml" />
     <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Squirrel.xml" />
+    <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Megaslug.xml" />
     <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_Tortoise.xml" />
     <Content Include="MOD\Defs\ThingDefs\SRP_animHusb_WildBoar.xml" />
     <Content Include="MOD\Defs\ThingDefs\SRP_Buildings_EggSpawner.xml" />
