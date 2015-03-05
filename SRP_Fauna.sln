@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimWorld_AnimalHusbandry", "RimWorld_AnimalHusbandry\RimWorld_AnimalHusbandry.csproj", "{A36BEEB2-7379-475B-B537-827E34571962}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SRP_Fauna", "SRP_Fauna\SRP_Fauna.csproj", "{A36BEEB2-7379-475B-B537-827E34571962}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
