@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ThingDefs>
+
+   <ThingDef Name="BasePawn" Abstract="True">
+      <eType>Pawn</eType>
+      <thingClass>Pawn</thingClass>
+      <category>Pawn</category>
+      <selectable>true</selectable>
+      <tickerType>Normal</tickerType>
+      <altitudeLayer>Pawn</altitudeLayer>
+      <useStandardHealth>false</useStandardHealth>
+      <hasTooltip>true</hasTooltip>
+      <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+      <inspectorTabs>
+         <li>ITab_Pawn_Thoughts</li>
+         <li>ITab_Pawn_Prisoner</li>
+         <li>ITab_Pawn_Gear</li>
+         <li>ITab_Pawn_Character</li>
+         <li>ITab_Pawn_Health</li>
+      </inspectorTabs>
+      <drawGUIOverlay>true</drawGUIOverlay>
+   </ThingDef>
+
+   <ThingDef ParentName="BasePawn" Name="BaseAnimal" Abstract="True">
+      <race>
+         <hasStory>false</hasStory>
+         <needsRest>false</needsRest>
+         <minFoodTaste>Plant</minFoodTaste>
+         <isFlesh>true</isFlesh>
+         <hasLeather>true</hasLeather>
+         <hasGenders>true</hasGenders>
+      </race>
+   </ThingDef>
+
+   <!-- ============================ Wild Animals ========================== -->
+
+  <ThingDef ParentName="BaseAnimal">
+    <defName>Furx</defName>
+    <thingClass>SRP_Fauna.Pawn_WildAnimal</thingClass>
+    <label>Wild Furx</label>
+    <description>Furxes are only found in large numbers on the desolate Rimplanets, where the hunt for their luxurious furs isn't deemed worth the time and effort.</description>
+    <graphicOverdraw>true</graphicOverdraw>
+    <sunShadowInfo>
+      <baseWidth>0.5</baseWidth>
+      <baseHeight>0.5</baseHeight>
+      <tallness>0.5</tallness>
+    </sunShadowInfo>
+    <targetHitChanceFactor>0.5</targetHitChanceFactor>
+    <statBases>
+      <MoveSpeed>5.50</MoveSpeed>
+      <Flammability>1.0</Flammability>
+      <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <meleeDamageBaseAmount>5</meleeDamageBaseAmount>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <meleeDamageBaseAmount>5</meleeDamageBaseAmount>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+        <meleeDamageDef>Bite</meleeDamageDef>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+    </verbs>
+    <race>
+      <thinkTree>CarnivoreAggresiveStandard</thinkTree>
+      <hungerRate>0.5</hungerRate>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <bodySize>0.4</bodySize>
+      <healthScale>0.7</healthScale>
+      <diet>Omnivorous</diet>
+      <leatherColor>(250,120,60)</leatherColor>
+      <leatherLabel>Furxhide</leatherLabel>
+      <leatherInsulation>1.25</leatherInsulation>
+      <soundWounded>Pawn_Rodent_Wounded</soundWounded>
+      <soundDeath>Pawn_Rodent_Death</soundDeath>
+      <soundCall>Pawn_Rodent_Call</soundCall>
+      <soundAngry>Pawn_Rodent_Angry</soundAngry>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+
+   <!-- ============================ Domesticated Animals Race ========================== -->
+
+   <ThingDef ParentName="BaseAnimal" Name="FurxDomestic">
+     <defName>FurxDomestic</defName>
+     <thingClass>SRP_Fauna.FarmAnimal</thingClass>
+     <label>Domesticated Furx</label>
+     <description>Domesticated Furx.</description>
+     <graphicOverdraw>true</graphicOverdraw>
+     <sunShadowInfo>
+       <baseWidth>0.5</baseWidth>
+       <baseHeight>0.5</baseHeight>
+       <tallness>0.5</tallness>
+     </sunShadowInfo>
+     <targetHitChanceFactor>0.5</targetHitChanceFactor>
+     <statBases>
+       <MoveSpeed>5.50</MoveSpeed>
+       <Flammability>1.0</Flammability>
+       <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+     </statBases>
+     <verbs>
+       <li>
+         <verbClass>Verb_MeleeAttack</verbClass>
+         <defaultCooldownTicks>100</defaultCooldownTicks>
+         <meleeDamageBaseAmount>5</meleeDamageBaseAmount>
+         <meleeDamageDef>Scratch</meleeDamageDef>
+         <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+       </li>
+       <li>
+         <verbClass>Verb_MeleeAttack</verbClass>
+         <defaultCooldownTicks>100</defaultCooldownTicks>
+         <meleeDamageBaseAmount>5</meleeDamageBaseAmount>
+         <meleeDamageDef>Scratch</meleeDamageDef>
+         <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+       </li>
+       <li>
+         <verbClass>Verb_MeleeAttack</verbClass>
+         <defaultCooldownTicks>100</defaultCooldownTicks>
+         <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+         <meleeDamageDef>Bite</meleeDamageDef>
+         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+       </li>
+     </verbs>
+     <race>
+       <thinkTree>CarnivoreAggresiveStandard</thinkTree>
+       <hungerRate>0.5</hungerRate>
+       <body>QuadrupedAnimalWithPawsAndTail</body>
+       <bodySize>0.4</bodySize>
+       <healthScale>0.7</healthScale>
+       <diet>Omnivorous</diet>
+       <leatherColor>(250,120,60)</leatherColor>
+       <leatherLabel>Furxhide</leatherLabel>
+       <leatherInsulation>1.25</leatherInsulation>
+       <soundWounded>Pawn_Rodent_Wounded</soundWounded>
+       <soundDeath>Pawn_Rodent_Death</soundDeath>
+       <soundCall>Pawn_Rodent_Call</soundCall>
+       <soundAngry>Pawn_Rodent_Angry</soundAngry>
+       <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+       <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+       <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+     </race>
+   </ThingDef>
+
+   <ThingDef ParentName="FurxDomestic" Name="FurxBaby">
+      <defName>FurxKid</defName>
+      <thingClass>SRP_Fauna.KidAnimal</thingClass>
+      <label>Furx Kid</label>
+      <graphicOverdraw>false</graphicOverdraw>
+      <targetHitChanceFactor>1.0</targetHitChanceFactor>
+      <statBases>
+        <MoveSpeed>0.95</MoveSpeed>
+        <Flammability>1.0</Flammability>
+        <ComfyTemperatureMin>-30</ComfyTemperatureMin>
+      </statBases>
+      <verbs>
+       <li>
+         <verbClass>Verb_MeleeAttack</verbClass>
+         <defaultCooldownTicks>100</defaultCooldownTicks>
+         <meleeDamageBaseAmount>1</meleeDamageBaseAmount>
+         <meleeDamageDef>Bite</meleeDamageDef>
+         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+       </li>
+      </verbs>
+      <race>
+       <hasLeather>false</hasLeather>
+       <healthScale>0.35</healthScale>
+       <hungerRate>0.1</hungerRate>
+       <bodySize>0.1</bodySize>
+      </race>
+   </ThingDef>
+
+</ThingDefs>
