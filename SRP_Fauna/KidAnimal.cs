@@ -29,7 +29,7 @@ namespace SRP_Fauna
 				"Maturity in: ",
 				"",
 				GenTime.TickstoDaysString (this.maturityTime),
-				"",
+				"\n",
 				base.GetInspectString ()
 			});
 		}

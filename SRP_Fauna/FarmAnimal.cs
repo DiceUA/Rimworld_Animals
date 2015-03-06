@@ -132,11 +132,11 @@ namespace SRP_Fauna
 			string result;
 			if (this.isPregnant ()) {
 				result = string.Concat (new string[] {
-					"Pregnant",
-					"",
+					"Pregnant ",
+					"\n",
 					"Due In: ",
 					GenTime.TickstoDaysString (this.PregnancyTime),
-					"",
+					"\n",
 					base.GetInspectString ()
 				});
 			}
@@ -158,7 +158,7 @@ namespace SRP_Fauna
 					return;
 				}
 				if (this.def.defName == "SquirrelDomestic") {
-					this.PregnancyTime = 190000;
+					this.PregnancyTime = 190000; //190000
 					return;
 				}
 				if (this.def.defName == "BoomratDomestic") {
@@ -170,7 +170,7 @@ namespace SRP_Fauna
 					return;
 				}
 				if (this.def.defName == "IguanaDomestic") {
-					this.PregnancyTime = 180000;
+					this.PregnancyTime = 180000; //180000                    
 					return;
 				}
 				if (this.def.defName == "CobraDomestic") {

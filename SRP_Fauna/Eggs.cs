@@ -63,7 +63,7 @@ namespace SRP_Fauna
                 if (this.eggParent == DomesticEggLayers.MegascarabDomestic.ToString())
                     this.hatchTime = 200000;
                 if (this.eggParent == DomesticEggLayers.IguanaDomestic.ToString())
-                    this.hatchTime = 260000;
+                    this.hatchTime = 260000; //260000
                 if (this.eggParent == DomesticEggLayers.CobraDomestic.ToString())
                     this.hatchTime = 240000;
                 if (this.eggParent == DomesticEggLayers.TortoiseDomestic.ToString())

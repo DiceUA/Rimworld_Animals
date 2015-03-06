@@ -27,20 +27,21 @@ namespace SRP_Fauna
         //
         private void Birth()
         {
+            //*
             foreach (AnimalsWild animalWild in Enum.GetValues(typeof(AnimalsWild)))
             {
                 if (this.pawn.def.defName == animalWild + "Domestic" && (Enum.IsDefined(typeof(DomesticEggLayers), animalWild + "Domestic" )))
                 {
-                    LayEgg(animalWild + "Domestic");
+                    LayEgg(this.pawn.def.defName);
                     break;
                 }
                 if (this.pawn.def.defName == animalWild + "Domestic" && !(Enum.IsDefined(typeof(DomesticEggLayers), animalWild + "Domestic" )))
-                {
-                    GiveBirth(animalWild + "Domestic");
+                {                    
+                    GiveAnimalBirth(animalWild.ToString());
                     break;
                 }
             }
-            return; // This is still bydlocode but probably it'll work, I'll try to make it with Lists
+            // This is still bydlocode but probably it'll work, I'll try to make it with Lists */
 
             /* Avoid bydlocode, GM level
             if (this.pawn.def.defName == "MuffaloDomestic")
@@ -71,7 +72,7 @@ namespace SRP_Fauna
                 GenSpawn.Spawn(pawn4, intVec4);
                 return;
             }
-            if (this.pawn.def.defName == "SquirrelDomestic")
+            /*if (this.pawn.def.defName == "SquirrelDomestic")
             {
                 int i = UnityEngine.Random.Range(2, 4);
                 while (i > 0)
@@ -82,6 +83,10 @@ namespace SRP_Fauna
                     GenSpawn.Spawn(pawn5, intVec5);
                 }
                 return;
+            }
+            if (this.pawn.def.defName == AnimalsWild.Squirrel + "Domestic")
+            {
+                GiveAnimalBirth(AnimalsWild.Squirrel.ToString());
             }
             if (this.pawn.def.defName == "BoomratDomestic")
             {
@@ -157,27 +162,21 @@ namespace SRP_Fauna
         } 
 
         private void LayEgg(string animalSpecies)
-        {
-            if (this.pawn.def.defName == animalSpecies + "Domestic")
-            {
-                Thing thing = ThingMaker.MakeThing(ThingDef.Named("EggHatchery"), null);
-                IntVec3 intVec = GenAdj.RandomAdjacentCell8Way(this.pawn.Position);
-                this.eg = (thing as Eggs);
-                this.eg.parentIs(animalSpecies + "Domestic");
-                GenSpawn.Spawn(thing, intVec);
-                return;
-            }
+        {           
+            Thing thing = ThingMaker.MakeThing(ThingDef.Named("EggHatchery"), null);
+            IntVec3 intVec = GenAdj.RandomAdjacentCell8Way(this.pawn.Position);
+            this.eg = (thing as Eggs);
+            this.eg.parentIs(animalSpecies);
+            GenSpawn.Spawn(thing, intVec);
+            return;            
         }
 
-        private void GiveBirth (string animalSpecies)
+        private void GiveAnimalBirth (string animalSpecies)
         {
-            if (this.pawn.def.defName == animalSpecies + "Domestic")
-            {
-                Pawn pawn = PawnGenerator.GeneratePawn(PawnKindDef.Named(animalSpecies + "Kid"), null);
-                IntVec3 intVec = GenAdj.RandomAdjacentCell8Way(this.pawn.Position);
-                GenSpawn.Spawn(pawn, intVec);
-                return;
-            }
+            Pawn pawn = PawnGenerator.GeneratePawn(PawnKindDef.Named(animalSpecies + "Kid"), null);
+            IntVec3 intVec = GenAdj.RandomAdjacentCell8Way(this.pawn.Position);
+            GenSpawn.Spawn(pawn, intVec);
+            return;
         }
 
         private bool isKilled()
