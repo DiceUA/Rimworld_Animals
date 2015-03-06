@@ -9,20 +9,27 @@ namespace SRP_Fauna
     /// Add new animals here
     /// </summary>
  
-    enum DomesticAnimals
+    enum DomesticAnimals : int
     {
-        MuffaloDomestic,
-        DeerDomestic,
-        SquirrelDomestic,
-        BoomratDomestic,
-        DromedaryDomestic,
-        MonkeyDomestic,
-        RhinocerosDomestic,
-        BoarDomestic,
+        MuffaloDomestic = 300000,
+        DeerDomestic = 265000,
+        SquirrelDomestic = 190000,
+        BoomratDomestic = 210000,
+        DromedaryDomestic = 295000,
+        MonkeyDomestic = 230000,
+        RhinocerosDomestic = 320000,
+        BoarDomestic = 270000,
         FurxDomestic,
         RimdogDomestic,
         RimramDomestic,
         RimwolfDomestic,
-        SnorkDomestic
+        SnorkDomestic,
+        //Here copy of egg layers
+        MegascarabDomestic = 150000,
+        IguanaDomestic = 180000,
+        CobraDomestic = 170000,
+        TortoiseDomestic = 190000,
+        LacosdileDomestic,
+        MegaslugDomestic
     }
 }

@@ -7,7 +7,7 @@ namespace SRP_Fauna
 {
     public class Animal
     {
-        private string name;
+        //private string name;
         private string species;
         private bool eggLayer;
 

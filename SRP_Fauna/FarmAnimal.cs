@@ -149,6 +149,18 @@ namespace SRP_Fauna
 		public void Impregnate ()
 		{
 			if (this.gender == Gender.Female) {
+
+                foreach (AnimalsWild animalWild in Enum.GetValues(typeof(AnimalsWild)))
+                {                   
+                    if (this.def.defName == animalWild + "Domestic")
+                    {
+                        this.PregnancyTime = (int)animalWild;
+                        break;
+                    }       
+                }
+
+
+                /* Start of bydlocode
 				if (this.def.defName == "MuffaloDomestic") {
 					this.PregnancyTime = 300000;
 					return;
@@ -158,7 +170,7 @@ namespace SRP_Fauna
 					return;
 				}
 				if (this.def.defName == "SquirrelDomestic") {
-					this.PregnancyTime = 190000; //190000
+					this.PregnancyTime = (int)DomesticAnimals.SquirrelDomestic; //190000
 					return;
 				}
 				if (this.def.defName == "BoomratDomestic") {
@@ -195,7 +207,7 @@ namespace SRP_Fauna
 				}
 				if (this.def.defName == "BoarDomestic") {
 					this.PregnancyTime = 270000;
-				}
+				}//*/// end of bydlocode
 			}
 		}
 

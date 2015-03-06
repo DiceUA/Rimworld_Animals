@@ -19,9 +19,14 @@
          <li>ITab_Pawn_Character</li>
          <li>ITab_Pawn_Health</li>
       </inspectorTabs>
+      <comps>
+        <li>
+          <compClass>CompAttachBase</compClass>
+        </li>
+      </comps>
       <drawGUIOverlay>true</drawGUIOverlay>
    </ThingDef>
-
+  
    <ThingDef ParentName="BasePawn" Name="BaseAnimal" Abstract="True">
       <race>
          <hasStory>false</hasStory>

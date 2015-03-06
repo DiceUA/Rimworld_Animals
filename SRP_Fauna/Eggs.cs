@@ -165,7 +165,7 @@ namespace SRP_Fauna
                 if (this.eggParent == DomesticEggLayers.MegaslugDomestic.ToString())                   
                     EggBirth(AnimalsWild.Megaslug.ToString() + "Kid"); // Пока так, а там посмотрим
 
-            } //*/
+                //*/
                 // End ifs
             }
         } // END public override void Tick()
