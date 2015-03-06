@@ -27,6 +27,22 @@ namespace SRP_Fauna
         //
         private void Birth()
         {
+            foreach (AnimalsWild animalWild in Enum.GetValues(typeof(AnimalsWild)))
+            {
+                if (this.pawn.def.defName == animalWild + "Domestic" && (Enum.IsDefined(typeof(DomesticEggLayers), animalWild + "Domestic" )))
+                {
+                    LayEgg(animalWild + "Domestic");
+                    break;
+                }
+                if (this.pawn.def.defName == animalWild + "Domestic" && !(Enum.IsDefined(typeof(DomesticEggLayers), animalWild + "Domestic" )))
+                {
+                    GiveBirth(animalWild + "Domestic");
+                    break;
+                }
+            }
+            return; // This is still bydlocode but probably it'll work, I'll try to make it with Lists
+
+            /* Avoid bydlocode, GM level
             if (this.pawn.def.defName == "MuffaloDomestic")
             {
                 Pawn pawn = PawnGenerator.GeneratePawn(PawnKindDef.Named("MuffaloKid"), null);
@@ -137,6 +153,30 @@ namespace SRP_Fauna
                 this.eg = (thing4 as Eggs);
                 this.eg.parentIs("TortoiseDomestic");
                 GenSpawn.Spawn(thing4, intVec12);
+            }//*/// Bydlocode
+        } 
+
+        private void LayEgg(string animalSpecies)
+        {
+            if (this.pawn.def.defName == animalSpecies + "Domestic")
+            {
+                Thing thing = ThingMaker.MakeThing(ThingDef.Named("EggHatchery"), null);
+                IntVec3 intVec = GenAdj.RandomAdjacentCell8Way(this.pawn.Position);
+                this.eg = (thing as Eggs);
+                this.eg.parentIs(animalSpecies + "Domestic");
+                GenSpawn.Spawn(thing, intVec);
+                return;
+            }
+        }
+
+        private void GiveBirth (string animalSpecies)
+        {
+            if (this.pawn.def.defName == animalSpecies + "Domestic")
+            {
+                Pawn pawn = PawnGenerator.GeneratePawn(PawnKindDef.Named(animalSpecies + "Kid"), null);
+                IntVec3 intVec = GenAdj.RandomAdjacentCell8Way(this.pawn.Position);
+                GenSpawn.Spawn(pawn, intVec);
+                return;
             }
         }
 
