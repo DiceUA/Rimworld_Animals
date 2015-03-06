@@ -48,6 +48,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animal.cs" />
     <Compile Include="AnimalsWild.cs" />
     <Compile Include="DomesticAnimals.cs" />
     <Compile Include="Building_PastureMarker.cs" />
