@@ -3,3 +3,8 @@ I:\Dev\Projects\SRP_Fauna\SRP_Fauna\bin\Debug\SRP_Fauna.pdb
 I:\Dev\Projects\SRP_Fauna\SRP_Fauna\obj\Debug\SRP_Fauna.dll
 I:\Dev\Projects\SRP_Fauna\SRP_Fauna\obj\Debug\SRP_Fauna.pdb
 I:\Dev\Projects\SRP_Fauna\SRP_Fauna\obj\Debug\SRP_Fauna.csprojResolveAssemblyReference.cache
+D:\_XFILES\DND5e\Dev\Rimworld_Animals\SRP_Fauna\bin\Debug\SRP_Fauna.dll
+D:\_XFILES\DND5e\Dev\Rimworld_Animals\SRP_Fauna\bin\Debug\SRP_Fauna.pdb
+D:\_XFILES\DND5e\Dev\Rimworld_Animals\SRP_Fauna\obj\Debug\SRP_Fauna.csprojResolveAssemblyReference.cache
+D:\_XFILES\DND5e\Dev\Rimworld_Animals\SRP_Fauna\obj\Debug\SRP_Fauna.dll
+D:\_XFILES\DND5e\Dev\Rimworld_Animals\SRP_Fauna\obj\Debug\SRP_Fauna.pdb
