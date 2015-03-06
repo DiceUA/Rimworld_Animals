@@ -32,11 +32,11 @@ namespace SRP_Fauna
             this.eggParent = parents;
             return null;
         }
-       
+
         public override void Tick()
         {
             if (this.justSpawned)
-            {   
+            {
                 /*/This fucking switch case can fuck your brain hard so I commented it and made IFs
                 switch ((DomesticEggLayers)Enum.Parse(typeof(DomesticEggLayers), this.eggParent, true) {
                     case DomesticEggLayers.MegascarabDomestic:
@@ -57,7 +57,8 @@ namespace SRP_Fauna
                     case DomesticEggLayers.MegaslugDomestic:
                         this.hatchTime = 200000;
                         break;    
-                } //*///End of switch
+                } //*/
+                //End of switch
 
                 if (this.eggParent == DomesticEggLayers.MegascarabDomestic.ToString())
                     this.hatchTime = 200000;
@@ -80,6 +81,19 @@ namespace SRP_Fauna
             }
             if (this.hatchTime <= 0)
             {
+
+                //Awesome code
+                foreach (AnimalsWild animalWild in Enum.GetValues(typeof(AnimalsWild)))
+                {
+                    if (this.eggParent == animalWild + "Domestic")
+                    {
+                        EggBirth(animalWild + "Kid");
+                        break;
+                    }                       
+                }
+                return;
+
+                /* fuuuuuu
                 Pawn pawn;
                 IntVec3 intVec;
                 int i;
@@ -133,6 +147,7 @@ namespace SRP_Fauna
                         GenSpawn.Spawn(pawn, intVec);
                     }
                     this.Destroy(0);
+                    return;
                 }
                 if (this.eggParent == DomesticEggLayers.LacosdileDomestic.ToString())
                 {
@@ -145,20 +160,28 @@ namespace SRP_Fauna
                         GenSpawn.Spawn(pawn, intVec);
                     }
                     this.Destroy(0);
+                    return;
                 }
-                if (this.eggParent == DomesticEggLayers.MegaslugDomestic.ToString())
-                {
-                    i = UnityEngine.Random.Range(3, 16);
-                    while (i > 0)
-                    {
-                        i--;
-                        pawn = PawnGenerator.GeneratePawn(PawnKindDef.Named("MegaslugKid"), null);
-                        intVec = GenAdj.RandomAdjacentCell8Way(base.Position);
-                        GenSpawn.Spawn(pawn, intVec);
-                    }
-                    this.Destroy(0);
-                }
+                if (this.eggParent == DomesticEggLayers.MegaslugDomestic.ToString())                   
+                    EggBirth(AnimalsWild.Megaslug.ToString() + "Kid"); // Пока так, а там посмотрим
+
+            } //*/
+                // End ifs
             }
+        } // END public override void Tick()
+
+        private void EggBirth(string kidSpecies)
+        {
+            int i = UnityEngine.Random.Range(3, 16);
+            while (i > 0)
+            {
+                i--;
+                Pawn pawn = PawnGenerator.GeneratePawn(PawnKindDef.Named(kidSpecies), null);
+                IntVec3 intVec = GenAdj.RandomAdjacentCell8Way(base.Position);
+                GenSpawn.Spawn(pawn, intVec);
+            }
+            this.Destroy(0);
+            return;
         }
     }
 }
