@@ -50,21 +50,19 @@ namespace SRP_Fauna
         }
 
         private void TryCapture()
-        {
-            if (this.animal.def.defName == "Squirrel")
-                Messages.Message(this.animal.def.defName + " SQUIRREL found");
-
-            Messages.Message(this.animal.def.defName + " TRY CAPTURE");
-            foreach(AnimalsWild animalWild in Enum.GetValues(typeof(AnimalsWild)))
+        {            
+            if (this.animalKind != this.animal.def.defName)
             {
-                if (this.animal.def.defName == animalWild.ToString())
+                foreach (AnimalsWild animalWild in Enum.GetValues(typeof(AnimalsWild)))
                 {
-                    Messages.Message(animalWild + " ENTERED IF");
-                    this.animalKind = this.animal.def.defName + "Domestic";
-                    break;
+                    if (this.animal.def.defName == animalWild.ToString())
+                    {
+                        this.animalKind = this.animal.def.defName + "Domestic";
+                        break;
+                    }
+
                 }
-                    
-            }
+            }            
             // Now we can capture all animals from AnimalsWild list
              
             

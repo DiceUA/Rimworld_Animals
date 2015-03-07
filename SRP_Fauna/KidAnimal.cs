@@ -41,6 +41,7 @@ namespace SRP_Fauna
 			}
 			if (this.maturityTime == 0) {
 				Pawn pawn = null;
+                /// Neeed to be refactored
 				if (this.def.defName == "MuffaloKid") {
 					pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("MuffaloDomestic"), null);
 				}

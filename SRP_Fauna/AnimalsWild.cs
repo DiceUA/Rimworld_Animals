@@ -12,7 +12,7 @@ namespace SRP_Fauna
     {
         Muffalo = 300000,
         Deer = 265000,
-        Squirrel = 190000,
+        Squirrel = 190001,
         Boomrat = 210000,
         Dromedary = 295000,
         Monkey = 230000,
