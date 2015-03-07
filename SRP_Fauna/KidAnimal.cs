@@ -36,12 +36,24 @@ namespace SRP_Fauna
 
 		private void Grow ()
 		{
-			if (this.maturityTime > 0) {
+			if (this.maturityTime > 0) 
 				this.maturityTime--;
-			}
-			if (this.maturityTime == 0) {
+			
+			if (this.maturityTime == 0) 
+            {
 				Pawn pawn = null;
+
+                foreach (AnimalsWild animalWild in Enum.GetValues(typeof(AnimalsWild)))
+                {
+                    if (this.def.defName == animalWild + "Kid")
+                    {
+                        pawn = PawnGenerator.GeneratePawn(PawnKindDef.Named(animalWild + "Domestic"), null);
+                        break;
+                    }
+                } //Godly refactor
+
                 /// Neeed to be refactored
+                /*
 				if (this.def.defName == "MuffaloKid") {
 					pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("MuffaloDomestic"), null);
 				}
@@ -99,7 +111,7 @@ namespace SRP_Fauna
 							}
 						}
 					}
-				}
+				}//*///
 				pawn.gender = this.gender;
 				IntVec3 position = base.Position;
 				GenSpawn.Spawn (pawn, position);
@@ -110,7 +122,20 @@ namespace SRP_Fauna
 		public override void Tick ()
 		{
 			base.Tick ();
-			if (this.justBorn) {
+			if (this.justBorn) 
+            {
+                foreach (AnimalsWild animalWild in Enum.GetValues(typeof(AnimalsWild)))
+                {
+                    if (this.def.defName == animalWild + "Kid")
+                    {
+                        this.maturityTime = (int)animalWild; // need to make maturity times and pregnancy times like dictionaries now set maturity = pregnancy
+                        this.justBorn = false;
+                        break;
+                    }
+                } //Godly refactor
+
+                /// Need refactor
+                /*
 				if (this.def.defName == "MuffaloKid") {
 					this.maturityTime = 300000;
 					this.justBorn = false;
@@ -180,7 +205,7 @@ namespace SRP_Fauna
 							}
 						}
 					}
-				}
+				}//*///bydlocode
 			}
 			this.Grow ();
 		}

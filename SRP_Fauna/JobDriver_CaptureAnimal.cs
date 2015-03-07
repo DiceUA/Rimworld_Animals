@@ -60,7 +60,6 @@ namespace SRP_Fauna
                         this.animalKind = this.animal.def.defName + "Domestic";
                         break;
                     }
-
                 }
             }            
             // Now we can capture all animals from AnimalsWild list
