@@ -48,7 +48,7 @@ namespace SRP_Fauna
                 p.def.defName == "RhinocerosDomestic" || 
                 p.def.defName == "SquirrelDomestic" || 
                 p.def.defName == "TortoiseDomestic" || 
-                p.def.defName == "BoarDomestic"
+                p.def.defName == "WildBoarDomestic"
 				select p).ToList<Pawn> ();
 
 				List<Pawn> list2 = (from p in Find.ListerPawns.AllPawns
@@ -63,7 +63,7 @@ namespace SRP_Fauna
                 p.def.defName == "RhinocerosKid" || 
                 p.def.defName == "SquirrelKid" || 
                 p.def.defName == "TortoiseKid" || 
-                p.def.defName == "BoarKid"
+                p.def.defName == "WildBoarKid"
 				select p).ToList<Pawn> ();
 
 				foreach (Pawn current in GenCollection.InRandomOrder<Pawn> (list)) {
@@ -246,8 +246,8 @@ namespace SRP_Fauna
 				return;
 			}
 			if (this.choice == 12) {
-				this.animalParent = "BoarDomestic";
-				this.animalKid = "BoarKid";
+				this.animalParent = "WildBoarDomestic";
+				this.animalKid = "WildBoarKid";
 			}
 		}
 

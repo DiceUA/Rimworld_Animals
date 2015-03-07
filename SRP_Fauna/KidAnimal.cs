@@ -85,8 +85,8 @@ namespace SRP_Fauna
 															pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("TortoiseDomestic"), null);
 														}
 														else {
-															if (this.def.defName == "BoarKid") {
-																pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("BoarDomestic"), null);
+															if (this.def.defName == "WildBoarKid") {
+																pawn = PawnGenerator.GeneratePawn (PawnKindDef.Named ("WildBoarDomestic"), null);
 															}
 														}
 													}

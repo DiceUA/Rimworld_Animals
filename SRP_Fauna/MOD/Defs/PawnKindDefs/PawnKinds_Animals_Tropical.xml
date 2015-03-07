@@ -88,9 +88,9 @@
    </PawnKindDef>
 
    <PawnKindDef>
-      <defName>BoarDomestic</defName>
+      <defName>WildBoarDomestic</defName>
       <label>Domesticated Boar</label>
-      <race>BoarDomestic</race>
+      <race>WildBoarDomestic</race>
       <pointsCost>10</pointsCost>
       <standardBodyGraphicPath>Things/Pawn/Animal/WildBoar</standardBodyGraphicPath>
       <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedMedium</dessicatedBodygraphicPath>
@@ -98,9 +98,9 @@
    </PawnKindDef>
 
    <PawnKindDef>
-      <defName>BoarKid</defName>
+      <defName>WildBoarKid</defName>
       <label>BoarKid</label>
-      <race>BoarKid</race>
+      <race>WildBoarKid</race>
       <pointsCost>1</pointsCost>
       <standardBodyGraphicPath>Things/Pawn/Animal/WildBoar</standardBodyGraphicPath>
       <dessicatedBodygraphicPath>Things/Pawn/Animal/CritterDessicatedMedium</dessicatedBodygraphicPath>

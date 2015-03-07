@@ -17,7 +17,7 @@ namespace SRP_Fauna
         Dromedary = 295000,
         Monkey = 230000,
         Rhinoceros = 320000,
-        Boar = 270000,
+        WildBoar = 270000,
         Furx = 274000,
         Rimdog = 273000,
         Rimram = 245000,

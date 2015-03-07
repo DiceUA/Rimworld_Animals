@@ -18,7 +18,7 @@ namespace SRP_Fauna
         DromedaryDomestic = 295000,
         MonkeyDomestic = 230000,
         RhinocerosDomestic = 320000,
-        BoarDomestic = 270000,
+        WildBoarDomestic = 270000,
         FurxDomestic,
         RimdogDomestic,
         RimramDomestic,
