@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<ThingDefs>
+	<ThingDef>
+		<defName>SRP_Fauna</defName>
+		<category>Building</category>
+		<eType>BuildingComplex</eType>
+		<menuHidden>true</menuHidden>
+		<label>SRP_Fauna_Initializer</label>
+		<thingClass>SRP_Fauna.ModInitializer</thingClass>
+		<inspectorTabs>
+			<li>SRP_Fauna.ModInitializer</li>
+		</inspectorTabs>
+	</ThingDef>
+</ThingDefs>
