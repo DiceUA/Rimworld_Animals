@@ -8,3 +8,5 @@ D:\_XFILES\DND5e\Dev\Rimworld_Animals\SRP_Fauna\bin\Debug\SRP_Fauna.pdb
 D:\_XFILES\DND5e\Dev\Rimworld_Animals\SRP_Fauna\obj\Debug\SRP_Fauna.csprojResolveAssemblyReference.cache
 D:\_XFILES\DND5e\Dev\Rimworld_Animals\SRP_Fauna\obj\Debug\SRP_Fauna.dll
 D:\_XFILES\DND5e\Dev\Rimworld_Animals\SRP_Fauna\obj\Debug\SRP_Fauna.pdb
+I:\games\RimWorld\Mods\SRP_Fauna\Assemblies\SRP_Fauna.dll
+I:\games\RimWorld\Mods\SRP_Fauna\Assemblies\SRP_Fauna.pdb

@@ -49,8 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animal.cs" />
+    <Compile Include="AnimalsInitializer.cs" />
     <Compile Include="AnimalsWild.cs" />
-    <Compile Include="DomesticAnimals.cs" />
     <Compile Include="Building_PastureMarker.cs" />
     <Compile Include="DomesticEggLayers.cs" />
     <Compile Include="JobDriver_FollowMaster.cs" />

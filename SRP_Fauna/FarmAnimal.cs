@@ -35,6 +35,8 @@ namespace SRP_Fauna
 
 		private int callTime = 200;
 
+        private Animal animal;
+
 		//
 		// Methods
 		//
@@ -147,17 +149,23 @@ namespace SRP_Fauna
 		}
 
 		public void Impregnate ()
-		{
-			if (this.gender == Gender.Female) {
+		{            
+			if (this.gender == Gender.Female) 
+            {
+                animal = new Animal();
+                animal.Species = this.def.defName;
+                this.PregnancyTime = animal.PregnancyETA; //New code :3
+                animal = null;
 
-                foreach (AnimalsWild animalWild in Enum.GetValues(typeof(AnimalsWild)))
-                {                   
-                    if (this.def.defName == animalWild + "Domestic")
-                    {
-                        this.PregnancyTime = (int)animalWild;
-                        break;
-                    }       
-                }
+                //foreach (AnimalsWild animalWild in Enum.GetValues(typeof(AnimalsWild)))
+                //{                   
+                //    if (this.def.defName == animalWild + "Domestic")
+                //    {
+                //        this.PregnancyTime = (int)animalWild;
+                //        break;
+                //    }       
+                //}
+                
 
 
                 /* Start of bydlocode

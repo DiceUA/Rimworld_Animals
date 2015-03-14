@@ -1,0 +1,10 @@
+I:\Dev\Projects\SRP_Fauna\SRP_FaunaTests\bin\Debug\SRP_FaunaTests.dll
+I:\Dev\Projects\SRP_Fauna\SRP_FaunaTests\bin\Debug\SRP_FaunaTests.pdb
+I:\Dev\Projects\SRP_Fauna\SRP_FaunaTests\bin\Debug\SRP_Fauna.dll
+I:\Dev\Projects\SRP_Fauna\SRP_FaunaTests\bin\Debug\SRP_Fauna.pdb
+I:\Dev\Projects\SRP_Fauna\SRP_FaunaTests\obj\Debug\SRP_FaunaTests.csprojResolveAssemblyReference.cache
+I:\Dev\Projects\SRP_Fauna\SRP_FaunaTests\obj\Debug\SRP_FaunaTests.dll
+I:\Dev\Projects\SRP_Fauna\SRP_FaunaTests\obj\Debug\SRP_FaunaTests.pdb
+I:\Dev\Projects\SRP_Fauna\SRP_FaunaTests\bin\Debug\Assembly-CSharp.dll
+I:\Dev\Projects\SRP_Fauna\SRP_FaunaTests\bin\Debug\UnityEngine.dll
+I:\Dev\Projects\SRP_Fauna\SRP_FaunaTests\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll

@@ -13,6 +13,8 @@ namespace SRP_Fauna
 
 		private int maturityTime;
 
+        private Animal animal;
+
 		//
 		// Methods
 		//
@@ -124,15 +126,20 @@ namespace SRP_Fauna
 			base.Tick ();
 			if (this.justBorn) 
             {
-                foreach (AnimalsWild animalWild in Enum.GetValues(typeof(AnimalsWild)))
-                {
-                    if (this.def.defName == animalWild + "Kid")
-                    {
-                        this.maturityTime = (int)animalWild; // need to make maturity times and pregnancy times like dictionaries now set maturity = pregnancy
-                        this.justBorn = false;
-                        break;
-                    }
-                } //Godly refactor
+                animal = new Animal();
+                animal.Species = this.def.defName;
+                this.maturityTime = animal.MaturityETA; //New code :3
+                animal = null;
+
+                //foreach (AnimalsWild animalWild in Enum.GetValues(typeof(AnimalsWild)))
+                //{
+                //    if (this.def.defName == animalWild + "Kid")
+                //    {
+                //        this.maturityTime = (int)animalWild; // need to make maturity times and pregnancy times like dictionaries now set maturity = pregnancy
+                //        this.justBorn = false;
+                //        break;
+                //    }
+                //} //Godly refactor
 
                 /// Need refactor
                 /*
