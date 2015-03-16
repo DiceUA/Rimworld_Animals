@@ -60,5 +60,33 @@ namespace SRP_FaunaTests
             //assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void ETAs()
+        {
+            //arrange
+            string animalSpecie = "SquirrelDomestic";
+            int expectedMaturity = 120000;
+            int expectedPregnancy = 190000;
+            var animal = new Animal();
+            //act
+            animal.Species = animalSpecie;
+            int actualMaturity = animal.MaturityETA;
+            int actualPregnancy = animal.PregnancyETA;
+            //assert            
+            Assert.AreEqual(expectedMaturity, actualMaturity);
+            Assert.AreEqual(expectedPregnancy, actualPregnancy);
+        }
+        [TestMethod]
+        public void Enum_Test()
+        {
+            //arrange
+            string animalSpecie = "SquirrelDomestic";            
+            var animal = new Animal();
+            //act
+            animal.Species = animalSpecie;
+            AnimalsWild actualSpecies = animal.SpeciesEnumerator;
+            //assert            
+            Assert.AreEqual(AnimalsWild.Squirrel, actualSpecies);            
+        }
     }
 }

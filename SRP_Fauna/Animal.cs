@@ -43,10 +43,10 @@ namespace SRP_Fauna
             set 
             { 
                 species = value;
+                CheckKind(species);
                 SpecieToEnum(species);
                 SetETAs();
-                //IsEggLayer(species);
-                CheckKind(species);
+                //IsEggLayer(species);                
             }
         }
 
@@ -60,13 +60,18 @@ namespace SRP_Fauna
             get { return maturityETA; }
         }
 
+        public AnimalsWild SpeciesEnumerator
+        {
+            get { return speciesEnum; }
+        }
+
         /// <summary>
         /// Methods
         /// </summary>
         private void SetETAs ()
         {
-            this.pregnancyETA = animalInit.PregnancyETA(this.speciesEnum);
-            this.maturityETA = animalInit.MaturityETA(this.speciesEnum);
+            pregnancyETA = animalInit.PregnancyETA(speciesEnum);
+            maturityETA = animalInit.MaturityETA(speciesEnum);
         }
         //private void IsEggLayer (string animal)
         //{
@@ -84,7 +89,7 @@ namespace SRP_Fauna
                 //Log.Message("Specie to enum try " + animalWild + "  " + animal);
                 if (animal == animalWild.ToString())
                 {
-                    this.speciesEnum = animalWild;
+                    speciesEnum = animalWild;
                     break;
                 }
             }
@@ -93,14 +98,12 @@ namespace SRP_Fauna
         {
             string rPattern = "Domestic";
             string r1Pattern = "Kid";         
-            Regex regex = new Regex(rPattern);
-            Regex regex1 = new Regex(r1Pattern);
-            if (regex.IsMatch(animal))
-                this.species = animal.Substring(0, animal.Length - rPattern.Length);
-            else if (regex1.IsMatch(animal))
-                this.species = animal.Substring(0, animal.Length - r1Pattern.Length);
+            if (species.Contains(rPattern))
+                species = animal.Substring(0, animal.Length - rPattern.Length);
+            else if (species.Contains(r1Pattern))
+                species = animal.Substring(0, animal.Length - r1Pattern.Length);
             else
-                this.species = animal;
+                species = animal;
         }
     }
 }

@@ -37,29 +37,6 @@ namespace SRP_Fauna
         {
             if (this.justSpawned)
             {
-                /*/This fucking switch case can fuck your brain hard so I commented it and made IFs
-                switch ((DomesticEggLayers)Enum.Parse(typeof(DomesticEggLayers), this.eggParent, true) {
-                    case DomesticEggLayers.MegascarabDomestic:
-                        this.hatchTime = 200000;
-                        break;
-                    case DomesticEggLayers.IguanaDomestic:
-                        this.hatchTime = 260000;
-                        break;
-                    case DomesticEggLayers.CobraDomestic:
-                        this.hatchTime = 240000;
-                        break;
-                    case DomesticEggLayers.TortoiseDomestic:
-                        this.hatchTime = 220000;
-                        break;
-                    case DomesticEggLayers.LacosdileDomestic:
-                        this.hatchTime = 280000;
-                        break;
-                    case DomesticEggLayers.MegaslugDomestic:
-                        this.hatchTime = 200000;
-                        break;    
-                } //*/
-                //End of switch
-
                 if (this.eggParent == DomesticEggLayers.MegascarabDomestic.ToString())
                     this.hatchTime = 200000;
                 if (this.eggParent == DomesticEggLayers.IguanaDomestic.ToString())
