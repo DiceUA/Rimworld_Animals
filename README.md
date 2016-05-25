@@ -2,4 +2,4 @@
 
 This is mod for game Rimworld Alpha 9
 
-I just converted it for new version of the game
+this was created using debugger to decompile older version of mod and convert it to new. Tons of work done here
